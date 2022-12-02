@@ -1,5 +1,51 @@
 @use './styles/partials/variables' as *;
 @use './styles/partials/mixins' as *;
-@use './styles/partials/typography' as *;
 @use './styles/partials/reset' as *;
 
+.btn {
+    height: 2.25rem;
+    padding: 0 1rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    @include m-h3;
+
+    @include tablet {
+        height: 2.375rem;
+        @include dt-h3;
+    }
+
+    &--primary {
+        @extend .btn;
+        background-color: $primaryLight;
+        color: $primaryWhite;
+        border: solid 1px $primaryLight;
+
+        &:hover {
+            background-color: $backgroundDark;
+            border: solid 1px $backgroundDark;
+        }
+    }
+
+    &--secondary {
+        @extend .btn;
+        background-color: $primaryWhite;
+        border: solid 1px $secondaryLight;
+        color: $secondaryDark;
+
+        &:hover {
+            border: solid $primaryLight 1px;
+            color: $primaryLight;
+        }
+    }
+
+    &--delete {
+        @extend .btn;
+        background-color: $red;
+        color: $primaryWhite;
+        border: none;
+
+        &:hover {
+            background-color: $backgroundDark;
+        }
+    }
+}

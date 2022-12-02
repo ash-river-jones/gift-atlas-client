@@ -1,2 +1,230 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.header {
+    display: flex;
+    background-color: $backgroundDark;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    padding: 1rem 2rem;
+
+    @include tablet {
+        @include dt-h1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding-left: 5.625rem;
+        padding-right: 5.625rem;
+    }
+
+    &__logo-wrapper{
+
+    }
+
+    &__logo{}
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem 1rem 1rem;
+        gap: 1rem;
+
+        @include tablet {
+            margin-left: auto;
+        }
+    }
+
+    &__nav-item--active {
+        background-color: $backgroundDark;
+        color: $secondaryLight;
+        width: 10.5rem;
+        height: 36px;
+        border-radius: 20px;
+        border: none;
+        background-color: $primaryDark;
+        color: $primaryWhite;
+        padding-inline: 1rem;
+
+        &:hover {
+            background-color: $primaryDark;
+            color: $primaryWhite;
+            background-color: $primaryDark;
+            color: $primaryWhite;
+        }
+    }
+
+    &__nav-item--inactive {
+        background-color: $secondaryDark;
+        color: $secondaryLight;
+        width: 10.5rem;
+        height: 36px;
+        border-radius: 20px;
+        border: none;
+        padding-inline: 1rem;
+
+        &:hover {
+            background-color: $primaryDark;
+            color: $primaryWhite;
+        }
+    }
+}
+
+// .header {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: $backgroundLight;
+//     padding-bottom: 4rem;
+
+//     @include tablet {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         padding: 0 2rem;
+//     }
+
+//     &__logo-wrapper {}
+
+//     &__logo {}
+
+//     &__nav-list {
+//         display: flex;
+//         padding-top: 1rem;
+//         padding-bottom: 1.5rem;
+//         gap: 1rem;
+
+//         @include tablet {
+//             margin-left: auto;
+//         }
+//     }
+
+//     &__nav-item {
+
+//         height: 2.25rem;
+//         padding: 0 1rem;
+//         border-radius: 1.25rem;
+//         border: none;
+//         text-decoration: none;
+//         @include m-h3;
+
+//         @include tablet {
+//             height: 2.375rem;
+//             @include dt-h3;
+//         }
+
+
+//         &--active {
+//             @extend .header__nav-item;
+//             background-color: $backgroundDark;
+//             color: $secondaryLight;
+//             background-color: $primaryDark;
+//             color: $primaryprimaryWhite;
+//             // color: $primaryprimaryWhite;
+//             // border: solid 1px $primaryLight;
+
+//             &:hover {
+//                 background-color: $primaryDark;
+//                 color: $primaryprimaryWhite
+//                 // border: solid 1px $primaryDark;
+//             }
+//         }
+
+//         &--inactive {
+//             @extend .header__nav-item;
+//             background-color: $backgroundDark;
+//             // border: solid 1px $secondaryLight;
+//             color: $secondaryLight;
+
+//             &:hover {
+//                 border: solid $primaryDark 1px;
+//                 color: $primaryprimaryWhite;
+//             }
+//         }
+//     }
+
+// }
+
+// .header {
+//     display: flex;
+//     flex-direction: column;
+//     background-color: #232940;
+//     align-items: center;
+//     z-index: 50;
+//     padding-top: 1.5rem;
+//     padding-bottom: 4rem;
+
+//     @include tablet {
+//         @include dt-h1;
+//         display: flex;
+//         flex-direction: row;
+//         padding-right: 2rem;
+//         padding-left: 2rem;
+//         padding-bottom: 5.375rem;
+//     }
+
+//     @include desktop {
+//         padding-left: 5.625rem;
+//         padding-right: 5.625rem;
+//     }
+
+//     &__wrap-nav {
+//         display: flex;
+//         padding-top: 1rem;
+//         padding-bottom: 1.5rem;
+//         gap: 1rem;
+
+//         @include tablet {
+//             margin-left: auto;
+//         }
+//     }
+
+//     &__nav-item1 {
+//         background-color: $backgroundDark;
+//         color: $secondaryLight;
+//         width: 10.5rem;
+//         height: 36px;
+//         border-radius: 20px;
+//         border: none;
+
+//         @include tablet {
+//             width: 6.6875rem;
+//         }
+
+//         &:hover {
+//             background-color: $primaryDark;
+//             color: $primaryWhite;
+//         }
+//     }
+
+//     &__nav-item2 {
+//         background-color: $backgroundDark;
+//         color: $secondaryLight;
+//         width: 10.5rem;
+//         height: 36px;
+//         border-radius: 20px;
+//         border: none;
+
+//         @include tablet {
+//             width: 6.6875rem;
+//         }
+
+//         &:hover {
+//             background-color: $primaryDark;
+//             color: $primaryWhite;
+//         }
+//     }
+
+//     &__nav-item1--active {
+//         background-color: $primaryDark;
+//         color: $primaryWhite;
+
+//         &:hover {
+//             background-color: $primaryDark;
+//             color: $primaryWhite;
+//         }
+//     }
+// }

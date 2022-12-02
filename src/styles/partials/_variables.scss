@@ -3,19 +3,20 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 //primary colors
-$instockBlack: #13182C;
-$instockIndigo: #2E66E5;
-$white: #FFFFFF;
+$primaryDark: #2e3133; 
+$primaryLight: #a7d9c9; 
+$primaryWhite: #ffffff;
 
 
 //secondary colors
-$slate: #5C667E;
-$cloud: #BDC5D5;
+$secondaryDark: #6e7b87;
+$secondaryLight: #d7e2ea;
 
 //background colors
-$graphite: #232940;
-$lightGrey: #F7F8F9;
+$backgroundDark: #445a67;
+$backgroundLight: #f6f7fb;
 
 //support colors
 $green: #158463;
-$red: #C94515;
+$red: #c94515;
+

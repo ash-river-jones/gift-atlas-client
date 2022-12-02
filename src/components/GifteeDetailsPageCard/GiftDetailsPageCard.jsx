@@ -1,4 +1,4 @@
-import './GifteeDetailsPageCard.scss';
+import './GiftDetailsPageCard.scss';
 import GifteeDetailsCardMultiGift from '../GifteeDetailsCardMultiGift/GifteeDetailsCardMultiGift'
 import GifteeDetailsCardSingleGift from '../GifteeDetailsCardSingleGift/GifteeDetailsCardSingleGift'
 
