@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 50;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
 
     @include tablet {
         @include dt-h1;
@@ -25,33 +25,34 @@
 
     }
 
-    &__logo{}
+    &__logo{
+        // height: 150%;
+        // width: 150%;
+    }
 
     &__nav {
         display: flex;
-        flex-direction: column;
-        padding: 1rem 3rem 1rem 1rem;
+        // flex-direction: column;
+        align-self: flex-start;
+        margin-top: 1.25rem;
+        padding: 1rem 1rem 1rem 1rem;
         gap: 1rem;
 
         @include tablet {
-            margin-left: auto;
+            // margin-left: auto;
         }
     }
 
     &__nav-item--active {
-        background-color: $backgroundDark;
-        color: $secondaryLight;
-        width: 10.5rem;
+        // width: 10.5rem;
         height: 36px;
         border-radius: 20px;
         border: none;
         background-color: $primaryDark;
         color: $primaryWhite;
-        padding-inline: 1rem;
+        padding-inline: 2rem;
 
         &:hover {
-            background-color: $primaryDark;
-            color: $primaryWhite;
             background-color: $primaryDark;
             color: $primaryWhite;
         }
@@ -60,11 +61,11 @@
     &__nav-item--inactive {
         background-color: $secondaryDark;
         color: $secondaryLight;
-        width: 10.5rem;
+        // width: 10.5rem;
         height: 36px;
         border-radius: 20px;
         border: none;
-        padding-inline: 1rem;
+        padding-inline: 2rem;
 
         &:hover {
             background-color: $primaryDark;

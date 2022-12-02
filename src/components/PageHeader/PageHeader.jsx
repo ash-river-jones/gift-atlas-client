@@ -1,5 +1,5 @@
 import './PageHeader.scss';
-import logo from '../../assets/icons/logo.png';
+import logo from '../../assets/icons/logo_4.png';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
