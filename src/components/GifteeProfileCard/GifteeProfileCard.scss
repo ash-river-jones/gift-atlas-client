@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.profile{
+    padding-block: 1rem;
+    display: flex;
+    justify-content:space-between   ;
+
+    &__side{
+        padding-inline: 1.5rem;
+        width: 50%;
+    }
+
+    &__section{
+
+    }
+
+    &__table-heading{
+        @include m-h4;
+    }
+
+    &__info-section{
+
+    }
+
+    &__name{
+        @include m-h3;
+        color: $primaryLight;
+    }
+
+    &__info{
+        @include m-h3;
+    }
+}

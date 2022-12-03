@@ -1,12 +1,16 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+#about-btn{
+    margin-bottom: 4.125rem;
+}
+
 .header {
     display: flex;
     background-color: $backgroundDark;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
-    z-index: 50;
+    z-index: 1;
     padding: 0rem 2rem;
 
     @include tablet {
@@ -21,19 +25,23 @@
         padding-right: 5.625rem;
     }
 
-    // &__logo-wrapper{
+    &__logo-wrapper{
+        align-self: flex-start;
+    }
 
-    // }
-
-    // &__logo{
-    
-    // }
+    &__logo{
+        
+        // margin-top: 1rem;
+        height: 7.0313rem;
+        width: 7.0313rem;
+    }
 
     &__nav {
         display: flex;
-        // flex-direction: column;
+        flex-direction: column;
         align-self: flex-start;
-        margin-top: 1.25rem;
+        justify-content: center;
+        // margin-top: 1.25rem;
         padding: 1rem 1rem 1rem 1rem;
         gap: 1rem;
 
@@ -43,7 +51,7 @@
     }
 
     &__nav-item--active {
-        // width: 10.5rem;
+        width: 8.125rem;
         height: 36px;
         border-radius: 20px;
         border: none;
@@ -60,7 +68,7 @@
     &__nav-item--inactive {
         background-color: $secondaryDark;
         color: $secondaryLight;
-        // width: 10.5rem;
+        width: 8.125rem;
         height: 36px;
         border-radius: 20px;
         border: none;

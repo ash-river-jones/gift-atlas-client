@@ -34,7 +34,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
     return (
 		<>
 			<section className='profile'>
-                <ul>
+                <ul className='profile__side'>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>NAME</h4>
                         <Link to={`/${giftee_id}`}><div className='profile__info-section'><p className='profile__name'>{name}</p></div></Link>
@@ -54,7 +54,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     </li> : <></>
                     }
                 </ul>
-                <ul>
+                <ul className='profile__side'>
                 <li className='profile__section'>   
                         <h4 className='profile__table-heading'>RELATIONSHIP</h4>
                         <div className='profile__info-section'><p className='profile__info'>{relationship}</p></div>

@@ -21,8 +21,8 @@ export default function PageHeader() {
 				<Link to='/'><div className='header__logo-wrapper'><img className='header__logo' src={logo} alt='' /></div></Link>
 				<div className='header__nav'>
 					<Link to='/'><button className={aboutPage ? 'header__nav-item--inactive' : 'header__nav-item--active'}>Dashboard</button></Link>
-					<Link to='/about'><button className={aboutPage ? 'header__nav-item--active' : 'header__nav-item--inactive'}>About</button></Link>
-					<Link to='/login'><button className='header__nav-item--inactive'>Log Out</button></Link>
+					<div id='about-btn'><Link to='/about'><button className={aboutPage ? 'header__nav-item--active' : 'header__nav-item--inactive'} >About</button></Link></div>
+					{/* <Link to='/login'><button className='header__nav-item--inactive'>Log Out</button></Link> */}
 				</div>
 			</div>
 		</>
