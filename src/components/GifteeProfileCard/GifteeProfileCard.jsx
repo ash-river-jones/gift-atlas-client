@@ -1,4 +1,8 @@
-import './GifteeProfileCard.scss'
+import './GifteeProfileCard.scss';
+import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
+import editIcon from '../../assets/icons/edit-24px.svg';
+import rightArrow from '../../assets/icons/chevron_right-24px.svg';
+
 
 import axios from 'axios';
 import { useState, useEffect } from 'react';
@@ -18,13 +22,11 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
             .get(`${API_URL}/giftees/${giftee_id}/purchased`)
             .then((response) => {
                 if (response.data[0]) {
-                    setPurchasedGifts(response.data[0].item_name)
+                    setPurchasedGifts(response.data[0])
                     setHasPurchasedGifts(true)
-                    // console.log(purchasedGifts,hasPurchasedGifts)
                 } else {
                     setPurchasedGifts([])
                     setHasPurchasedGifts(false)
-                    // console.log(purchasedGifts,hasPurchasedGifts)
                 }
             })
     }, [giftee_id])
@@ -37,7 +39,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                 <ul className='profile__side'>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>NAME</h4>
-                        <Link to={`/${giftee_id}`}><div className='profile__info-section'><p className='profile__name'>{name}</p></div></Link>
+                        <Link to={`/${giftee_id}`}><div className='profile__info-section'><p className='profile__name'>{name}</p><img src={rightArrow} alt="right arrow" /></div></Link>
                     </li>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>BIRTHDAY</h4>
@@ -45,7 +47,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     </li>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>NEXT HOLIDAY</h4>
-                        <div className='profile__info-section'><p className='profile__info'>{next_holiday}</p></div>
+                        <div className='profile__info-section'><p className='profile__info profile__order-status'>{next_holiday}</p></div>
                     </li>
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   
@@ -53,6 +55,9 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                         <div className='profile__info-section'><p className='profile__info'>Ordered/Purchasde</p></div>
                     </li> : <></>
                     }
+                    <li className='profile__section'>   
+                        <div className='profile__info-section profile__delete'><Link to={`/${giftee_id}/delete`}><img src={deleteIcon} alt="Delete Giftee Icon" /></Link></div>
+                    </li>
                 </ul>
                 <ul className='profile__side'>
                 <li className='profile__section'>   
@@ -70,9 +75,12 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT PURCHASED</h4>
-                        <div className='profile__info-section'><p className='profile__info'>{purchasedGifts}</p></div>
+                        <div className='profile__info-section'><p className='profile__info'>{purchasedGifts.item_name}</p></div>
                     </li>: <></>
                     }
+                    <li className='profile__section'>   
+                        <div className='profile__info-section profile__edit'><Link to={`/${giftee_id}/edit`}><img src={editIcon} alt="Edit Giftee Icon" /></Link></div>
+                    </li>
                 </ul>
             </section>
 		</>

@@ -2,17 +2,19 @@
 @use '../../styles/partials/mixins' as *;
 
 .profile{
-    padding-block: 1rem;
+    // padding-block: 1rem;
     display: flex;
-    justify-content:space-between   ;
+    justify-content:space-between;
+    border-bottom: 1px solid $secondaryLight;
+
 
     &__side{
-        padding-inline: 1.5rem;
+        margin-left: 1.5rem;
         width: 50%;
     }
 
     &__section{
-
+        margin-block: 1rem;
     }
 
     &__table-heading{
@@ -20,7 +22,7 @@
     }
 
     &__info-section{
-
+        display: flex;
     }
 
     &__name{
@@ -29,6 +31,20 @@
     }
 
     &__info{
-        @include m-h3;
+        @include m-p2;
+    }
+
+    &__delete{
+
+    }
+
+    &__edit{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1.5rem;
+    }
+    
+    &__order-status{
+
     }
 }

@@ -15,7 +15,6 @@ export default function HomeCard() {
 		axios
 			.get(`${API_URL}/giftees`)
 			.then((response) => {
-				console.log(response.data)
 				setGifteeData(response.data)
 			})
 			.catch((err) => {console.log(err)})
@@ -28,7 +27,7 @@ export default function HomeCard() {
 					<h1 className='dash__title'>Giftees</h1>
 					<div className="dash__wrapper">
 						<div className="dash__search-wrapper"><input className='dash__search' type='text' placeholder='Search...' onChange={(e)=>{setSearchInput(e.target.value.toLocaleLowerCase())}}/></div>
-						<div className='dash__new-giftee-wrapper'><p className='dash__new-giftee-btn'>+ Add New Giftee</p></div>
+						<div className='dash__new-giftee-wrapper'><Link to={`/add`}><p className='dash__new-giftee-btn'>+ Add New Giftee</p></Link></div>
 					</div>
 				</section>
 				<section className='giftees'>
