@@ -1,2 +1,43 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.multi-gift{
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0 0rem 0;
+        border-bottom: 1px solid $secondaryLight;
+    }
+
+    &__side{
+        width: 50%;
+    }
+
+    &__detail-section{
+        margin-bottom: 1.25rem
+    }
+
+    &__heading{
+        @include m-h4;
+        margin-bottom: .25rem
+
+    }
+
+    &__info{
+        @include m-p2;
+    }
+
+    &__edit{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__info-section{
+
+    }
+
+    &__gift-status{
+        
+    }
+}

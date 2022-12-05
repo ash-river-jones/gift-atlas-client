@@ -8,6 +8,7 @@ import AddGift from './pages/AddGift/AddGift'
 import GiftDetails from './pages/GiftDetails/GiftDetails'
 import EditGiftDetails from './pages/EditGiftDetails/EditGiftDetails'
 import GifteeRequestForm from './pages/GifteeRequestForm/GifteeRequestForm'
+import RequestGiftForm from './pages/RequestGiftForm/RequestGiftForm'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/login' element={<Login />} />
           <Route path='/add' element={<AddGiftee />} />
+          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />
           <Route path='/:giftee_id' element={<GifteeDetails />} />
           <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />
           <Route path='/:giftee_id/add' element={<AddGift />}/>

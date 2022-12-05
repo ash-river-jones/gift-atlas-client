@@ -1,2 +1,57 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.single-gift{
+
+    &__wrapper{
+
+    }
+
+    &__details-top{
+
+    }
+
+    &__name{
+
+    }
+
+    &__desc{
+
+    }
+
+    &__desc-deets{
+
+    }
+
+    &__side{
+
+    }
+
+    &__details-section{
+
+    }
+
+    &__heading{
+
+    }
+
+    &__info{
+
+        &--link{
+            @extend .single-gift__info;
+        }
+    }
+
+    &__info-section{
+
+    }
+
+    &__delete{
+
+    }
+
+    &__edit{
+
+    }
+
+}

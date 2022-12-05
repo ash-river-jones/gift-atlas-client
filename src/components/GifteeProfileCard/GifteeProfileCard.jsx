@@ -3,7 +3,6 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import rightArrow from '../../assets/icons/chevron_right-24px.svg';
 
-
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -47,12 +46,12 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     </li>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>NEXT HOLIDAY</h4>
-                        <div className='profile__info-section'><p className='profile__info profile__order-status'>{next_holiday}</p></div>
+                        <div className='profile__info-section'><p className='profile__info'>{next_holiday}</p></div>
                     </li>
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT STATUS</h4>
-                        <div className='profile__info-section'><p className='profile__info'>Ordered/Purchasde</p></div>
+                        <div className='profile__info-section'><p className='profile__info profile__order-status'>Ordered/Purchasde</p></div>
                     </li> : <></>
                     }
                     <li className='profile__section'>   
