@@ -4,7 +4,11 @@
 .single-gift{
 
     &__wrapper{
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 1rem 0rem 1rem;
+        border-bottom: 1px solid $secondaryLight;
     }
 
     &__details-top{
@@ -12,18 +16,26 @@
     }
 
     &__name{
+        @include m-h3;
 
     }
 
     &__desc{
-
+        @include m-h4;
+        // font-size: .875rem;
     }
 
     &__desc-deets{
+        @include m-p2;
+    }
 
+    &__sides-wrapper{
+        display: flex;
+        justify-content: space-between;
     }
 
     &__side{
+        width: 50%
 
     }
 
@@ -32,11 +44,13 @@
     }
 
     &__heading{
-
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
     }
 
     &__info{
-
+        @include m-p2;
         &--link{
             @extend .single-gift__info;
         }

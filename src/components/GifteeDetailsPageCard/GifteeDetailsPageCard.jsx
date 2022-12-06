@@ -42,10 +42,8 @@ export default function GifteeDetailsPageCard() {
 		} else if ( gifteeGifts.length === 1){
 			setHasMultipleGifts(false)
 			setGifteeGifts(gifteeGifts[0])
-			console.log("single",gifteeGifts, gifteeGifts.length, hasMultipleGifts)
 		} else if (gifteeGifts.length >= 2 ) {
 			setHasMultipleGifts(true)
-			console.log("multi",gifteeGifts, gifteeGifts.length, hasMultipleGifts)
 		}
 	},[gifteeData, gifteeGifts, hasMultipleGifts])
 

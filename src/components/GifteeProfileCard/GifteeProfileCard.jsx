@@ -3,6 +3,8 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import rightArrow from '../../assets/icons/chevron_right-24px.svg';
 
+import calcDaysTo from "../../utils/utils"
+
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -13,8 +15,17 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 export default function GifteeProfileCard({ giftee_id, address, birthday, email, gift_form_opt_in, name, next_holiday, next_holiday_date, phone, relationship, user_id }) {
 	const [purchasedGifts, setPurchasedGifts] = useState([])
     const [hasPurchasedGifts, setHasPurchasedGifts] = useState(false)
-    const [daysToBirthday, setDaysToBirthday] = useState('mock data')
-    const [daysToNextHoliday, setDaysToNextHoliday] = useState('mock data')
+
+    const holidaySplit = next_holiday_date.toLowerCase().split(" ")
+    const [holidayMonth, setHolidayMonth] = useState(holidaySplit[0].slice(0,3))
+    const [holidayDay, setHolidayDay] = useState(holidaySplit[1])
+
+    const birthdaySplit = birthday.toLowerCase().split(" ")
+
+    const [birthdayMonth, setBirthdayMonth] = useState(birthdaySplit[0].slice(0,3))
+    const [birthdayDay, setBirthdayDay] = useState(birthdaySplit[1])
+
+    var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 
     useEffect(() => {
         axios
@@ -30,7 +41,12 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
             })
     }, [giftee_id])
 
-
+    useEffect(() => {
+        setBirthdayMonth(months.indexOf(birthdayMonth))
+        setBirthdayDay(+birthdayDay)
+        setHolidayMonth(months.indexOf(holidayMonth))
+        setHolidayDay(+holidayDay)
+    },[birthday,next_holiday_date])
 
     return (
 		<>
@@ -65,11 +81,11 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     </li>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>DAYS TO BIRTHDAY</h4>
-                        <div className='profile__info-section'><p className='profile__info'>{daysToBirthday}</p></div>
+                        <div className='profile__info-section'><p className='profile__info'>{calcDaysTo(birthdayMonth, birthdayDay)}</p></div>
                     </li>
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>DAYS UNTIL</h4>
-                        <div className='profile__info-section'><p className='profile__info'>{daysToNextHoliday}</p></div>
+                        <div className='profile__info-section'><p className='profile__info'>{calcDaysTo(holidayMonth, holidayDay)}</p></div>
                     </li>
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   

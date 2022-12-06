@@ -19,7 +19,7 @@ export default function GifteeDetailsCardMultiGift({ gift_id, giftee_id, user_id
 					<ul className="multi-gift__side">
 						<li className='multi-gift__detail-section'>
 							<h4 className='multi-gift__heading'>GIFT IDEA</h4>
-							<p className='multi-gift__info'>{item_name}</p>
+							<Link to={`/${giftee_id}/${gift_id}`}><p className='multi-gift__info multi-gift__info-link'>{item_name}</p></Link>
 						</li>
 						<li className='multi-gift__detail-section'>
 							<h4 className='multi-gift__heading'>RETAILER</h4>

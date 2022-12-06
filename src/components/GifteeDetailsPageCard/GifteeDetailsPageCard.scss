@@ -2,7 +2,11 @@
 @use '../../styles/partials/mixins' as *;
 
 .giftee-deets{
-    margin: 2rem 1.5rem 0 1.5rem;
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: $primaryWhite;
+    box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
 
     &__header{
         display: flex;
@@ -10,6 +14,8 @@
         align-items: center;
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $secondaryLight;
+        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+
     }
 
     &__header-section{
@@ -46,6 +52,7 @@
 }
 
 .details{
+    padding: 0rem 1.5rem 0rem 1.5rem ;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;

@@ -6,8 +6,11 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
-        padding: 1rem 0 0rem 0;
+        padding: 1rem 1rem 0rem 1rem;
+        // margin: 0rem 1.5rem 0rem 1.5rem ;
         border-bottom: 1px solid $secondaryLight;
+
+
     }
 
     &__side{
@@ -15,7 +18,7 @@
     }
 
     &__detail-section{
-        margin-bottom: 1.25rem
+        margin-bottom: 1rem
     }
 
     &__heading{
@@ -26,6 +29,11 @@
 
     &__info{
         @include m-p2;
+        color: $primaryDark;
+    }
+
+    &__info-link{
+        color: $primaryLight;
     }
 
     &__edit{
@@ -38,6 +46,6 @@
     }
 
     &__gift-status{
-        
+
     }
 }

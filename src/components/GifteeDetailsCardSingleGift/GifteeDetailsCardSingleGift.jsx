@@ -11,12 +11,12 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_id, gift_status, item_description, item_name, order_number, price, product_link, retailer, tracking_number }) {
 	const [gifteeData , setGifteeData] = useState('')
+
 	
 	useEffect(() => {
 		axios
 		.get(`${API_URL}/giftees/${giftee_id}`)
 		.then((response) => {
-			console.log(response.data[0])
 			setGifteeData(response.data[0])
 
 		})
@@ -28,6 +28,7 @@ export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_i
 		<>
 			<section className='single-gift'>
 				<div className='single-gift__wrapper'>
+					<div className=''>
 					<div className='single-gift__details-top'>
 						<h1 className='single-gift__name'>{item_name}</h1>
 					</div>
@@ -35,6 +36,8 @@ export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_i
 						<h4 className='single-gift__desc'>ITEM DESCRIPTION:</h4>
 						<p className='single-gift__desc-deets'>{item_description}</p>
 					</div>
+					</div>
+					<div className='single-gift__sides-wrapper'>
 					<div className="single-gift__side">
 						<div className='single-gift__detail-section'>
 							<h4 className='single-gift__heading'>RETAILER</h4>
@@ -46,7 +49,7 @@ export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_i
 						</div>
 						<div className='single-gift__detail-section'>
 							<h4 className='single-gift__heading'>GIFTEE</h4>
-							<p className='single-gift__info'>{giftee_id}</p>
+							<p className='single-gift__info'>{gifteeData.name}</p>
 						</div>
 						<div className='single-gift__detail-section'>
 							<div className='single-gift__info-section single-gift__delete'><Link to={`/${giftee_id}/${gift_id}/delete`}><img src={deleteIcon} alt="Edit Gift Icon" /></Link></div>
@@ -68,6 +71,7 @@ export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_i
 						<div className='single-gift__detail-section'>
 							<div className='single-gift__info-section single-gift__edit'><Link to={`/${giftee_id}/${gift_id}/edit`}><img src={editIcon} alt="Edit Giftee Icon" /></Link></div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</section>
