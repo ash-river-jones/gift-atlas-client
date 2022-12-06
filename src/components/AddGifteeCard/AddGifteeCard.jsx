@@ -129,7 +129,7 @@ export default function AddGifteeCard() {
 			addressError === true ||
 			giftFormOptInError === true
 		) {
-			console.log(`missing required data to post new giftee`)
+			alert(`missing required data to post new giftee`)
 		} else {
 			axios
 			.post(`${API_URL}/giftees`, {
@@ -146,7 +146,6 @@ export default function AddGifteeCard() {
 				gift_form_opt_in: giftFormOptIn
 			})
 			.then((response) => {
-				console.log(response.data)
 				navigate('/')
 			})
 			.catch((err) => {

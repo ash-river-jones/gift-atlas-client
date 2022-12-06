@@ -149,7 +149,7 @@ export default function EditGifteeDetailsCard() {
 			addressError === true ||
 			giftFormOptInError === true
 		) {
-			console.log(`missing required data to update giftee`)
+			alert(`missing required data to update giftee`)
 		} else {
 			axios
 			.put(`${API_URL}/giftees/${giftee_id}`, {
@@ -165,8 +165,7 @@ export default function EditGifteeDetailsCard() {
 				address: address,
 				gift_form_opt_in: giftFormOptIn
 			})
-			.then((response) => {
-				console.log(response.data)
+			.then(() => {
 				navigate('/')
 			})
 			.catch((err) => {
