@@ -21,7 +21,6 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
     const [holidayDay, setHolidayDay] = useState(holidaySplit[1])
 
     const birthdaySplit = birthday.toLowerCase().split(" ")
-
     const [birthdayMonth, setBirthdayMonth] = useState(birthdaySplit[0].slice(0,3))
     const [birthdayDay, setBirthdayDay] = useState(birthdaySplit[1])
 
