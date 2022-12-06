@@ -12,7 +12,7 @@
     }
 
     &__details-top{
-
+        margin-bottom: 1rem;
     }
 
     &__name{
@@ -61,11 +61,13 @@
     }
 
     &__delete{
-
+        margin-block: 1rem;
     }
 
     &__edit{
-
+        margin-block: 1rem;
+        display: flex;
+        justify-content: flex-end;
     }
 
 }

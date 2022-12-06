@@ -9,20 +9,7 @@ import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
-export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_id, gift_status, item_description, item_name, order_number, price, product_link, retailer, tracking_number }) {
-	const [gifteeData , setGifteeData] = useState('')
-
-	
-	useEffect(() => {
-		axios
-		.get(`${API_URL}/giftees/${giftee_id}`)
-		.then((response) => {
-			setGifteeData(response.data[0])
-
-		})
-	},[giftee_id])
-
-	// const {name} = gifteeData
+export default function GifteeDetailsCardSingleGift({ giftee_name, gift_id, giftee_id, user_id, gift_status, item_description, item_name, order_number, price, product_link, retailer, tracking_number }) {
 
 	return (
 		<>
@@ -49,7 +36,7 @@ export default function GifteeDetailsCardSingleGift({ gift_id, giftee_id, user_i
 						</div>
 						<div className='single-gift__detail-section'>
 							<h4 className='single-gift__heading'>GIFTEE</h4>
-							<p className='single-gift__info'>{gifteeData.name}</p>
+							<p className='single-gift__info'>{giftee_name}</p>
 						</div>
 						<div className='single-gift__detail-section'>
 							<div className='single-gift__info-section single-gift__delete'><Link to={`/${giftee_id}/${gift_id}/delete`}><img src={deleteIcon} alt="Edit Gift Icon" /></Link></div>

@@ -5,6 +5,8 @@ import { useParams, Link } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
+import calcDaysTo from '../../utils/utils'
+
 import backArrow from '../../assets/icons/arrow_back-24px.svg'
 import editIcon from '../../assets/icons/edit-24px-inverted.svg'
 
@@ -25,6 +27,7 @@ export default function GifteeDetailsPageCard() {
 		.get(`${API_URL}/giftees/${giftee_id}`)
 		.then((response) => {
 			setGifteeData(response.data[0])
+			console.log(response.data[0])
 		})
 
 		axios
@@ -45,6 +48,7 @@ export default function GifteeDetailsPageCard() {
 		} else if (gifteeGifts.length >= 2 ) {
 			setHasMultipleGifts(true)
 		}
+		
 	},[gifteeData, gifteeGifts, hasMultipleGifts])
 
 	useEffect(() => {
@@ -54,6 +58,8 @@ export default function GifteeDetailsPageCard() {
 			setGifteeEmailValid(false)
 		}	
 	},[gifteeData.email])
+
+
 	
 	
 
@@ -112,6 +118,7 @@ export default function GifteeDetailsPageCard() {
 							)})
 					:
 					<GifteeDetailsCardSingleGift 
+						giftee_name={gifteeData.name}
 						gift_id={gifteeGifts.gift_id}
 						giftee_id={gifteeGifts.giftee_id}
 						user_id={gifteeGifts.user_id}
