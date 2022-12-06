@@ -22,10 +22,10 @@ export default function App() {
           <Route path='/' element={<Home />} />                                     // done
           <Route path='/about' element={<About />} />                               // second last priority
           <Route path='/login' element={<Login />} />                               // last priority
-          <Route path='/add' element={<AddGiftee />} />                             // 
+          <Route path='/add' element={<AddGiftee />} />                             // done functionality
           <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // 
           <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done
-          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // 
+          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // done functionality
           <Route path='/:giftee_id/add' element={<AddGift />}/>                     //  
           <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            // 
           <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  // 
