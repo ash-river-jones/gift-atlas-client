@@ -214,12 +214,12 @@ export default function EditGiftDetailsCard() {
 							<select name="giftee" id="giftee" className='edit-gift-details__select' onChange={(e) => {setGifteeID(e.target.value)}}>
 								<option value={null} className='edit-gift-details__select-option'>Please Select</option>
 								{gifteeList.map((giftee) => (
-									<option key={giftee.giftee_id} value={giftee.giftee_id}>{giftee.name}</option>
+									<option key={giftee.giftee_id} value={giftee.giftee_id} className='edit-gift-details__select-option'>{giftee.name}</option>
 								))}
 							</select>
 						</div>
 						<div className='edit-gift-defails__btn-container'>
-						<div className='edit-gift-details__btn-wrapper--cancel'><button type="button" className='edit-gift-details__btn--cancel' onClick={()=>{navigate(`/${gifteeID}`)}}>Cancel</button></div>
+						<div className='edit-gift-details__btn-wrapper--cancel'><button type="button" className='edit-gift-details__btn--cancel' onClick={()=>{navigate(`/${giftee_id}`)}}>Cancel</button></div>
 							<div className='edit-gift-details__btn-wrapper--submit'><button type="submit" className='edit-gift-details__btn--submit'>Save</button></div>
 						</div>
 					</form>

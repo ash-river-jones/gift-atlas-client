@@ -1,2 +1,82 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.add-gift{
+
+    &__header{
+
+    }
+
+    &__header-wrapper{
+
+    }
+
+    &__back-arrow{
+
+    }
+
+    &__heading{
+
+    }
+}
+
+.add-gift-details{
+
+    &__wrapper{
+
+    }
+
+    &__header{
+
+    }
+
+    &__label{
+
+    }
+
+    &__radio-label{
+
+    }
+
+    &__radio{
+
+    }
+
+    &__input{
+
+    }
+
+    &__select{
+
+    }
+
+    &__select-option{
+
+    }
+
+    &__btn-container{
+
+    }
+
+    &__btn-wrapper{
+
+        &--cancel{
+            @extend .add-gift-details__btn-wrapper;
+        }
+        
+        &--submit{
+            @extend .add-gift-details__btn-wrapper;
+        }
+    }
+
+    &__btn{
+
+        &--cancel{
+            @extend .add-gift-details__btn;
+        }
+
+        &--submit{
+            @extend .add-gift-details__btn;
+        }
+    }
+}

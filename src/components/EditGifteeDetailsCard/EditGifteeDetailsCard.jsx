@@ -188,41 +188,41 @@ export default function EditGifteeDetailsCard() {
 							<label htmlFor='name' className='edit-giftee-details__label'>Name</label>
 							<input type="text" id='name' name='name' className='edit-giftee-details__input' value={name} placeholder='Name' onChange={(e)=>{setName(e.target.value)}} />
 							{nameError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 							<label htmlFor="relationship" className='edit-giftee-details__label'>Relationship</label>
 							<input type="text" id='relationship' name='relationship' className='edit-giftee-details__input' value={relationship} placeholder='Relationshop' onChange={(e)=>{setRelationship(e.target.value)}} />
 							{relationshipError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 							<label htmlFor="birthday" className='edit-giftee-details__label'>Birthday</label>
 							<input type="text" id='birthday' name='birthday' className='edit-giftee-details__input' value={birthday} placeholder='Birthday (Month, Day)' onChange={(e)=>{setBirthday(e.target.value)}} />
 							{birthdayError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 							<label htmlFor="next_holiday" className='edit-giftee-details__label'>Next Holiday</label>
 							<input type="text" id='next_holiday' name='next_holiday' className='edit-giftee-details__input' value={nextHoliday} placeholder='Holiday' onChange={(e)=>{setNextHoliday(e.target.value)}} />
 							{nextHolidayError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 							<label htmlFor="next_holiday_date" className='edit-giftee-details__label'>Date of Next Holiday</label>
 							<input type="text" id='next_holiday_date' name='next_holiday_date' className='edit-giftee-details__input' value={nextHolidayDate} placeholder='Next Holiday Date (Month, Day)' onChange={(e)=>{setNextHolidayDate(e.target.value)}} />
 							{nextHolidayDateError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 						</div>
@@ -231,34 +231,24 @@ export default function EditGifteeDetailsCard() {
 							<label htmlFor='email' className='edit-giftee-details__label'>Email</label>
 							<input type="text" id='email' name='email' className='edit-giftee-details__input' value={email} placeholder='example@example.com' onChange={(e)=>{setEmail(e.target.value)}} />
 							{emailError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 							<label htmlFor='phone' className='edit-giftee-details__label'>Phone Number (Optional)</label>
 							<input type="text" id='phone' name='phone' className='edit-giftee-details__input' value={phone} placeholder='+1 (234) 567-8901' onChange={(e)=>{setPhone(e.target.value)}} />
-							{phoneError && (
-							<div className='edit-giftee__error-wrapper--rec'>
-								<img className='edit-giftee__error-img--rec' src={error} alt='' />
-								<p className='edit-giftee__error--text--rec'>This field is reccomended</p>
-							</div>
-							)}
 							<label htmlFor='address' className='edit-giftee-details__label'>Address (Optional)</label>
-							<input type="text" id='address' name='address' className='edit-giftee-details__input' value={address} placeholder='address' onChange={(e)=>{setAddress(e.target.value)}} />
-							{addressError && (
-							<div className='edit-giftee__error-wrapper--rec'>
-								<img className='edit-giftee__error-img--rec' src={error} alt='' />
-								<p className='edit-giftee__error--text--rec'>This field is reccomended</p>
-							</div>
-							)}
+							<input type="text" id='address' name='address' className='edit-giftee-details__input' value={address} placeholder='Address' onChange={(e)=>{setAddress(e.target.value)}} />
 							<label htmlFor='gift_form_opt_in' className='edit-giftee-details__label'>Opt-in Gift Form</label>
-							<label htmlFor='gift_form_opt_in-yes' className='edit-giftee-details__radio-label'><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='edit-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} />Yes</label>
-							<label htmlFor='gift_form_opt_in-no' className='edit-giftee-details__radio-label'><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='edit-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} />No</label>
+							<div className="edit-giftee-details__radio-wrapper">
+								<div><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='edit-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-yes' className='edit-giftee-details__radio-label'>Yes</label></div>
+								<div><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='edit-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-no' className='edit-giftee-details__radio-label'>No</label></div>
+							</div>
 							{giftFormOptInError && (
-							<div className='edit-giftee__error-wrapper'>
-								<img className='edit-giftee__error-img' src={error} alt='' />
-								<p className='edit-giftee__error--text'>This field is required</p>
+							<div className='edit-giftee-details__error-wrapper'>
+								<img className='edit-giftee-details__error-img' src={error} alt='' />
+								<p className='edit-giftee-details__error--text'>This field is required</p>
 							</div>
 							)}
 						</div>

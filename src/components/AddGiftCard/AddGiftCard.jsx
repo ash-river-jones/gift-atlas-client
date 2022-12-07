@@ -191,7 +191,7 @@ export default function AddGiftCard() {
 							<select name="giftee" id="giftee" className='add-gift-details__select' onChange={(e) => {setGifteeID(e.target.value)}}>
 								<option value={null} className='add-gift-details__select-option'>Please Select</option>
 								{gifteeList.map((giftee) => (
-									<option key={giftee.giftee_id} value={giftee.giftee_id}>{giftee.name}</option>
+									<option key={giftee.giftee_id} value={giftee.giftee_id} className='add-gift-details__select-option'>{giftee.name}</option>
 								))}
 							</select>
 						</div>
