@@ -222,8 +222,8 @@ export default function AddGifteeCard() {
 							<input type="text" id='address' name='address' className='add-giftee-details__input' value={address} placeholder='Address' onChange={(e)=>{setAddress(e.target.value)}} />
 							<label htmlFor='gift_form_opt_in' className='add-giftee-details__label'>Opt-in Gift Form</label>
 							<div className='add-giftee-details__radio-wrapper'>
-								<div><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='add-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-yes' className='add-giftee-details__radio-label'>Yes</label></div>
-								<div><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='add-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-no' className='add-giftee-details__radio-label'>No</label></div>
+								<div className='add-giftee-details__radio-container'><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='add-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-yes' className='add-giftee-details__radio-label'>Yes</label></div>
+								<div className='add-giftee-details__radio-container'><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='add-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-no' className='add-giftee-details__radio-label'>No</label></div>
 							</div>
 							{giftFormOptInError && (
 							<div className='add-giftee-details__error-wrapper'>

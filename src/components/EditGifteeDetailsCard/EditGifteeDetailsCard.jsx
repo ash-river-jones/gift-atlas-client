@@ -180,7 +180,7 @@ export default function EditGifteeDetailsCard() {
 				<section className='edit-giftee__header'>
 					<div className='edit-giftee__header-wrapper'>
 						<Link to={`/`}><img className='edit-giftee__back-arrow' src={backArrow} alt="Back arrow to home dashboard" /></Link>
-						<h1 className='edit-giftee__headingr'>Edit Giftee</h1>
+						<h1 className='edit-giftee__heading'>Edit Giftee</h1>
 					</div>
 					<form onSubmit={handleEditGiftee}>
 						<div className='edit-giftee-details__wrapper'>
@@ -242,8 +242,8 @@ export default function EditGifteeDetailsCard() {
 							<input type="text" id='address' name='address' className='edit-giftee-details__input' value={address} placeholder='Address' onChange={(e)=>{setAddress(e.target.value)}} />
 							<label htmlFor='gift_form_opt_in' className='edit-giftee-details__label'>Opt-in Gift Form</label>
 							<div className="edit-giftee-details__radio-wrapper">
-								<div><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='edit-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-yes' className='edit-giftee-details__radio-label'>Yes</label></div>
-								<div><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='edit-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-no' className='edit-giftee-details__radio-label'>No</label></div>
+								<div className='edit-giftee-details__radio-container'><input type="radio" id='gift_form_opt_in-yes' name='gift_form_opt_in' className='edit-giftee-details__radio' value='Yes' checked={giftFormOptIn === "Yes" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-yes' className='edit-giftee-details__radio-label'>Yes</label></div>
+								<div className='edit-giftee-details__radio-container'><input type="radio" id='gift_form_opt_in-no' name='gift_form_opt_in' className='edit-giftee-details___radio' value='No' checked={giftFormOptIn === "No" ? true : false} onChange={(e)=>{setGiftFormOptIn(e.target.value)}} /><label htmlFor='gift_form_opt_in-no' className='edit-giftee-details__radio-label'>No</label></div>
 							</div>
 							{giftFormOptInError && (
 							<div className='edit-giftee-details__error-wrapper'>
@@ -253,7 +253,7 @@ export default function EditGifteeDetailsCard() {
 							)}
 						</div>
 						<div className='edit-giftee-details__btn-container'>
-							<div className='edit-giftee-details__btn-wrapper--cancel'><button type="button" className='edit-giftee-details__btn--cancel'>Cancel</button></div>
+							<div className='edit-giftee-details__btn-wrapper--cancel'><button type="button" className='edit-giftee-details__btn--cancel' onClick={()=>{navigate(`/${giftee_id}`)}} >Cancel</button></div>
 							<div className='edit-giftee-details__btn-wrapper--submit'><button type="submit" className='edit-giftee-details__btn--submit'>Save</button></div>
 						</div>
 					</form>

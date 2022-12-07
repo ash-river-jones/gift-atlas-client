@@ -64,6 +64,13 @@
         display: flex;
         gap: 1rem;
     }
+
+    &__radio-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__radio-label{
         margin-top: .5rem;
         @include m-h4;
@@ -102,16 +109,6 @@
         &--rec{
             @extend .add-giftee-details__error--text;
         }
-    }
-
-    &__btn-container{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        background-color: $backgroundLight;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        border-radius: 0px 0px 3px 3px;
     }
 
     &__btn-container{
