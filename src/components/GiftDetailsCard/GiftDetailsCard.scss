@@ -1,2 +1,102 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.gift-details{
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: $primaryWhite;
+    box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header{
+
+    }
+
+    &__header-wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $secondaryLight;
+        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+    }
+
+    &__back-arrow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--edit{
+            
+        }
+    }
+
+    &__heading{
+        @include m-h2;
+        margin-left: .75rem;
+        color: $primaryDark;
+    }
+
+    &__edit-wrapper{
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: $primaryLight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__edit-icon{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &__wrapper{
+        padding: 0rem 1.5rem 1rem 1.5rem ;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondaryLight;
+    }
+    
+    &__top{
+
+    }
+
+    &__label{
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+    }
+
+    &__info{
+        @include m-p2;
+
+        &--desc{
+            @extend .gift-details__info;
+
+        }
+        &--link{
+            @extend .gift-details__info;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            color: $primaryDark;
+            text-decoration: underline;
+            
+        }
+    }
+
+    &__bottom{
+        display: flex;
+    }
+
+    &__side{
+        width: 50%;
+    }
+}
