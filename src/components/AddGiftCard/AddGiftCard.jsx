@@ -109,7 +109,7 @@ export default function AddGiftCard() {
 			setTrackingNumberError(null)
 		}
 	},[trackingNumber])
-	
+
 	useEffect(() => {
 		if (gifteeID === '') {
 			setGifteeIDError(true)

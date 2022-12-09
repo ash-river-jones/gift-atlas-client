@@ -17,17 +17,18 @@ export default function GifteeDetailsPageCard() {
 	const [gifteeGifts, setGifteeGifts] = useState([])
 	const [hasMultipleGifts, setHasMultipleGifts] = useState(false)
 	const [gifteeEmailValid, setGifteeEmailValid] = useState(false)
-	const [daysToBirthday, setDaysToBirthday] = useState('mockdata')
-	const [daysToNextHoliday, setDaysToNextHoliday] = useState('mockdata')
+	const [hasZeroGifts, setHasZeroGifts] = useState(true)
+	const [next_holiday_date, setNext_holiday_date] = useState('')
+	const [birthday, setBirthday] = useState('')
 	
 	const {giftee_id} = useParams()
-	
+
+
 	useEffect(() => {
 		axios
 		.get(`${API_URL}/giftees/${giftee_id}`)
 		.then((response) => {
 			setGifteeData(response.data[0])
-			console.log(response.data[0])
 		})
 
 		axios
@@ -35,21 +36,26 @@ export default function GifteeDetailsPageCard() {
 		.then((response) => {
 			setGifteeGifts(response.data)
 		})
-
-
 	},[giftee_id])
 
 	useEffect(() => {
 		if(gifteeGifts.length === 0) {
-			console.log("Giftee has 0 gifts ---- @Ash - find solution to this issue", gifteeGifts.length, hasMultipleGifts)
+			setHasZeroGifts(true)
 		} else if ( gifteeGifts.length === 1){
+			setHasZeroGifts(false)
 			setHasMultipleGifts(false)
 			setGifteeGifts(gifteeGifts[0])
 		} else if (gifteeGifts.length >= 2 ) {
+			setHasZeroGifts(false)
 			setHasMultipleGifts(true)
 		}
 		
 	},[gifteeData, gifteeGifts, hasMultipleGifts])
+
+	useEffect(() => {
+		setNext_holiday_date(gifteeData.next_holiday_date)
+		setBirthday(gifteeData.birthday)
+	},[gifteeData])
 
 	useEffect(() => {
 		if (gifteeData.email) {
@@ -58,11 +64,6 @@ export default function GifteeDetailsPageCard() {
 			setGifteeEmailValid(false)
 		}	
 	},[gifteeData.email])
-
-
-	
-	
-
 
 	return (
 		<>
@@ -81,7 +82,7 @@ export default function GifteeDetailsPageCard() {
 						<div className='details__section'>
 							<h4 className='details__subheader'>BIRTHDAY</h4>
 							<p className='details__info'>{gifteeData.birthday}</p>
-							<p className='details__info'>{daysToBirthday}</p>
+							<p className='details__info'>{birthday?calcDaysTo(birthday):""}</p>
 						</div>
 					</div>
 					<div className='details__side'>
@@ -91,12 +92,12 @@ export default function GifteeDetailsPageCard() {
 						<div className='details__section'>
 							<h4 className='details__subheader'>NEXT HOLIDAY</h4>
 							<p className='details__info'>{gifteeData.next_holiday}</p>
-							<p className='details__info'>{daysToNextHoliday}</p>
+							<p className='details__info'>{next_holiday_date?calcDaysTo(next_holiday_date):""}</p>
 						</div>
 					</div>
 				</section>
 				<section className='gifts'>
-					{hasMultipleGifts ? 
+					{hasZeroGifts? <></> : hasMultipleGifts ? 
 						gifteeGifts
 							.map((data)=>{
 								return(

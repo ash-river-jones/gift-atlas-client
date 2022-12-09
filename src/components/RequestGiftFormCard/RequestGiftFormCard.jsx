@@ -86,18 +86,18 @@ export default function RequestGiftFormCard() {
 		e.preventDefault();
 		emailjs.send('service_10j4rpa', 'template_budget', emailParamsBudget, 'Uxre8dykVxvLN5T7z')
 			.then(function(response) {
-				console.log('SUCCESS!', response.status, response.text);
+				navigate('/about')
 			}, function(error) {
-				console.log('FAILED...', error);
+				alert('FAILED...', error);
 			})
 	};
 	const sendEmailNoBudget = (e) => {
 		e.preventDefault();
 		emailjs.send('service_10j4rpa', 'template_no-budget', emailParamsNoBudget, 'Uxre8dykVxvLN5T7z')
 			.then(function(response) {
-				console.log('SUCCESS!', response.status, response.text);
+				navigate('/about')
 			}, function(error) {
-				console.log('FAILED...', error);
+				alert('FAILED...', error);
 			})
 	};
 

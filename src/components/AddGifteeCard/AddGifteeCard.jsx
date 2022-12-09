@@ -125,8 +125,6 @@ export default function AddGifteeCard() {
 			nextHolidayError === true ||
 			nextHolidayDateError === true ||
 			emailError === true ||
-			phoneError === true ||
-			addressError === true ||
 			giftFormOptInError === true
 		) {
 			alert(`missing required data to post new giftee`)
@@ -182,7 +180,7 @@ export default function AddGifteeCard() {
 							</div>
 							)}
 							<label htmlFor="birthday" className='add-giftee-details__label'>Birthday</label>
-							<input type="text" id='birthday' name='birthday' className='add-giftee-details__input' value={birthday} placeholder='Birthday (Month, Day)' onChange={(e)=>{setBirthday(e.target.value)}} />
+							<input type="text" id='birthday' name='birthday' className='add-giftee-details__input' value={birthday} placeholder='Birthday (Month Day)' onChange={(e)=>{setBirthday(e.target.value)}} />
 							{birthdayError && (
 							<div className='add-giftee-details__error-wrapper'>
 								<img className='add-giftee-details__error-img' src={error} alt='' />
@@ -198,7 +196,7 @@ export default function AddGifteeCard() {
 							</div>
 							)}
 							<label htmlFor="next_holiday_date" className='add-giftee-details__label'>Date of Next Holiday</label>
-							<input type="text" id='next_holiday_date' name='next_holiday_date' className='add-giftee-details__input' value={nextHolidayDate} placeholder='Next Holiday Date (Month, Day)' onChange={(e)=>{setNextHolidayDate(e.target.value)}} />
+							<input type="text" id='next_holiday_date' name='next_holiday_date' className='add-giftee-details__input' value={nextHolidayDate} placeholder='Next Holiday Date (Month Day)' onChange={(e)=>{setNextHolidayDate(e.target.value)}} />
 							{nextHolidayDateError && (
 							<div className='add-giftee-details__error-wrapper'>
 								<img className='add-giftee-details__error-img' src={error} alt='' />

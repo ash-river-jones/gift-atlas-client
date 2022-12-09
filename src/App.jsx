@@ -19,19 +19,24 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />                                     // done
-          <Route path='/about' element={<About />} />                               //       // second last priority
-          <Route path='/login' element={<Login />} />                               //       // last priority
-          <Route path='/add' element={<AddGiftee />} />                             // done 
-          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // done major functionality
-          <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done
-          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // done 
-          <Route path='/:giftee_id/add' element={<AddGift />}/>                     // done
+          <Route path='/' element={<Home />} />                                     // done  // done
+          <Route path='/about' element={<About />} />                               //       //      // second last priority
+          <Route path='/login' element={<Login />} />                               //       //      // last priority
+          <Route path='/add' element={<AddGiftee />} />                             // done  // done // checked validation -- fine tune styling
+          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // done  //      // major functionality - fine tuning neccesary -- validation
+          <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done  // done // major functionality - fine tuning necessary -- styling 
+          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // done  //      // fine tuning neccesary -- validation
+          <Route path='/:giftee_id/add' element={<AddGift />}/>                     // done  //      // fine tuning neccesary -- validation
           <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            // done 
-          <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  // done
-          <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} /> //       // for external users
+          <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  // done  //      // fine tuning neccesary -- validation
+          <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} /> // done  //      // fine tuning necessary -- validation and confirm that necessary feilds are there
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
+
+// check if updating axios calls to include user ID (that lives in .env) 
+
+// use valid email and valid phone number functions 
