@@ -23,11 +23,11 @@ export default function App() {
           <Route path='/about' element={<About />} />                               //       // second last priority
           <Route path='/login' element={<Login />} />                               //       // last priority
           <Route path='/add' element={<AddGiftee />} />                             // done 
-          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    //       // request gift from giftee // Email JS
+          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // done major functionality
           <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done
           <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // done 
           <Route path='/:giftee_id/add' element={<AddGift />}/>                     // done
-          <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            // done  // single gift details
+          <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            // done 
           <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  // done
           <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} /> //       // for external users
         </Routes>

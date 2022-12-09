@@ -1,2 +1,146 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.hidden{
+    display: none;
+}
+
+.request-gift{
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: $primaryWhite;
+    box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header{
+
+    }
+    
+    &__header-wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $secondaryLight;
+        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+    }
+
+    &__back-arrow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading{
+        @include m-h1;
+        margin-left: .75rem;
+        color: $primaryDark;
+    }
+}
+
+.request-gift-details{
+    &__wrapper{
+        padding: 0rem 1.5rem 1rem 1.5rem ;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondaryLight;
+    }
+
+    &__heading{
+        @include m-h3;
+        margin-bottom: .25rem;
+    }
+
+    &__label{
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+    }
+
+    &__text-area{
+        border: 1px solid $primaryDark;
+        border-radius: 1.25rem;
+        padding: 1rem;
+        resize: none;
+    }
+
+    &__radio-wrapper{
+        &__radio-wrapper{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__radio-label{
+        margin-top: .5rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+    }
+
+    &__radio{
+
+    }
+
+    &__input{
+        height: 2.25rem;
+        border: 1px solid $primaryDark;
+        border-radius: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    &__btn-container{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-inline: 1.5rem;
+        background-color: $backgroundLight;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    &__btn-wrapper{
+        width: 50%;
+
+        &--cancel{
+            @extend .request-gift-details__btn-wrapper;
+        }
+
+        &--submit{
+            @extend .request-gift-details__btn-wrapper;
+        }
+    }
+    
+    &__btn{
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        width: 100%;
+        @include m-h3;
+
+        &--cancel{
+            @extend .request-gift-details__btn;
+            background-color: $primaryWhite;
+            border: solid 1px $secondaryLight;
+            color: $secondaryDark;
+    
+            &:hover {
+                border: solid $primaryLight 1px;
+                color: $primaryLight;
+            }
+        }
+
+        &--submit{
+            @extend .request-gift-details__btn;
+            background-color: $primaryLight;
+            color: $primaryWhite;
+            border: solid 1px $primaryLight;
+            &:hover {
+                background-color: $backgroundDark;
+                border: solid 1px $backgroundDark;
+            }
+        }
+    }
+}

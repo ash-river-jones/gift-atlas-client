@@ -78,8 +78,8 @@ summary,
 time,
 mark,
 audio,
-video,
-textarea {
+video
+{
   margin: 0;
   padding: 0;
   border: 0;
@@ -88,6 +88,17 @@ textarea {
   vertical-align: baseline;
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+textarea{
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  resize: none;
 }
 
 /* HTML5 display-role reset for older browsers */
