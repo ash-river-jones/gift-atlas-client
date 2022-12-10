@@ -20,9 +20,8 @@ export default function SignUpCard() {
 
 	const handelSignUp = (e) => {
 		e.preventDefault()
-
 		if (emailError === true || passwordError === true || nameError === true) {
-			alert('please provide your email and password')
+			alert('please provide your name, email and password')
 		} else {
 			axios.post(`${API_URL}/login/signup`, {
                 user_name: name,
@@ -30,9 +29,10 @@ export default function SignUpCard() {
 				password: password
 			})
 			.then((response) => {
-				if (response.data.status === 200) {
+				if (response.status === 201) {
+					console.log(response.data.token)
 					sessionStorage.authToken = response.data.token
-					navigate('/dashboard')
+					// navigate('/dashboard')
 				}
 			})
 			.catch((err) => {
@@ -80,7 +80,7 @@ export default function SignUpCard() {
                             <label htmlFor="email" className='login-details__label'>Email</label>
 							<input type="text" name='email' id='email' className='login-details__input' value={email} placeholder='example@example.com' onChange={(e)=>{setEmail(e.target.value)}} />
 							<label htmlFor="password" className='login-details__label'>Password</label>
-							<input type="text" name='password' id='password' className='login-details__input' value={email} placeholder='Enter your password' onChange={(e)=>{setPassword(e.target.value)}} />
+							<input type="password" name='password' id='password' className='login-details__input' value={password} placeholder='Enter your password' onChange={(e)=>{setPassword(e.target.value)}} />
 						</div>
 						<div className="sign-up-details__btn-container">
 							<div className="sign-up-details__btn-wrapper--cancel"><button type="button" className='login-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>

@@ -8,7 +8,6 @@ export default function PageHeader() {
 	let path = window.location.pathname;
 
 	useEffect(() => {
-		console.log(path)
 		if (path === "/") {
 			setAboutPage(true);
 		} else {
