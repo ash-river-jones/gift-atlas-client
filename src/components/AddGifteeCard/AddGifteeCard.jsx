@@ -11,6 +11,7 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function AddGifteeCard() {
 	const navigate = useNavigate();
+	const token = sessionStorage.authToken
 
 
 	const [name, setName] = useState('')
@@ -142,9 +143,12 @@ export default function AddGifteeCard() {
 				phone: phone,
 				address: address,
 				gift_form_opt_in: giftFormOptIn
-			})
+			},{
+				headers: {
+					Authorization: `Bearer ${token}`
+			}})
 			.then((response) => {
-				navigate('/')
+				navigate('/dashboard')
 			})
 			.catch((err) => {
 				console.log(err)
@@ -231,7 +235,7 @@ export default function AddGifteeCard() {
 							)}
 						</div>
 						<div className='add-giftee-details__btn-container'>
-							<div className='add-giftee-details__btn-wrapper--cancel'><button type="button" className='add-giftee-details__btn--cancel' onClick={()=>{navigate('/')}}>Cancel</button></div>
+							<div className='add-giftee-details__btn-wrapper--cancel'><button type="button" className='add-giftee-details__btn--cancel' onClick={()=>{navigate('/dashboard')}}>Cancel</button></div>
 							<div className='add-giftee-details__btn-wrapper--submit'><button type="submit" className='add-giftee-details__btn--submit'>Save</button></div>
 						</div>
 					</form>

@@ -8,6 +8,7 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function EditGifteeDetailsCard() {
+	const token = sessionStorage.authToken
 	const giftee_id_obj = useParams()
 	const giftee_id = giftee_id_obj.giftee_id
 	const navigate = useNavigate();
@@ -15,7 +16,11 @@ export default function EditGifteeDetailsCard() {
 
 	useEffect(() => {
 		axios
-		.get(`${API_URL}/giftees/${giftee_id}`)
+		.get(`${API_URL}/giftees/${giftee_id}`,{
+			headers:{
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setGifteeData(response.data[0])
 		})
@@ -145,8 +150,6 @@ export default function EditGifteeDetailsCard() {
 			nextHolidayError === true ||
 			nextHolidayDateError === true ||
 			emailError === true ||
-			phoneError === true ||
-			addressError === true ||
 			giftFormOptInError === true
 		) {
 			alert(`missing required data to update giftee`)
@@ -164,9 +167,13 @@ export default function EditGifteeDetailsCard() {
 				phone: phone,
 				address: address,
 				gift_form_opt_in: giftFormOptIn
+			},{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
 			})
 			.then(() => {
-				navigate('/')
+				navigate('/dashboard')
 			})
 			.catch((err) => {
 				console.log(err)

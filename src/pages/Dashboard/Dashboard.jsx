@@ -1,13 +1,13 @@
-import './Home.scss';
+import './Dashboard.scss';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PageFooter from '../../components/PageFooter/PageFooter';
-import HomeCard from '../../components/HomeCard/HomeCard';
+import DashboardCard from '../../components/DashboardCard/DashboardCard';
 
-export default function Home() {
+export default function Dashboard() {
 	return (
 		<div>
 			<PageHeader />
-			<HomeCard />
+			<DashboardCard />
 			<PageFooter />
 		</div>
 	);

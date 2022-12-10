@@ -13,6 +13,7 @@ import editIcon from '../../assets/icons/edit-24px-inverted.svg'
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function GifteeDetailsPageCard() {
+	const token = sessionStorage.authToken
 	const [gifteeData, setGifteeData] = useState([])
 	const [gifteeGifts, setGifteeGifts] = useState([])
 	const [hasMultipleGifts, setHasMultipleGifts] = useState(false)
@@ -26,13 +27,21 @@ export default function GifteeDetailsPageCard() {
 
 	useEffect(() => {
 		axios
-		.get(`${API_URL}/giftees/${giftee_id}`)
+		.get(`${API_URL}/giftees/${giftee_id}`,{
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setGifteeData(response.data[0])
 		})
 
 		axios
-		.get(`${API_URL}/giftees/${giftee_id}/gifts`)
+		.get(`${API_URL}/giftees/${giftee_id}/gifts`,{
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setGifteeGifts(response.data)
 		})

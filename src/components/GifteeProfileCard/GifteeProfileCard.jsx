@@ -13,12 +13,17 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 
 export default function GifteeProfileCard({ giftee_id, address, birthday, email, gift_form_opt_in, name, next_holiday, next_holiday_date, phone, relationship, user_id }) {
-	const [purchasedGifts, setPurchasedGifts] = useState([])
+	const token = sessionStorage.authToken
+    const [purchasedGifts, setPurchasedGifts] = useState([])
     const [hasPurchasedGifts, setHasPurchasedGifts] = useState(false)
 
     useEffect(() => {
         axios
-            .get(`${API_URL}/giftees/${giftee_id}/purchased`)
+            .get(`${API_URL}/giftees/${giftee_id}/purchased`,{
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
             .then((response) => {
                 if (response.data[0]) {
                     setPurchasedGifts(response.data[0])
@@ -49,7 +54,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT STATUS</h4>
-                        <div className='profile__info-section'><p className='profile__info profile__order-status'>Ordered/Purchasde</p></div>
+                        <div className='profile__info-section'><p className='profile__info profile__order-status'>Ordered/Purchased</p></div>
                     </li> : <></>
                     }
                     <li className='profile__section'>   

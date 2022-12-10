@@ -9,6 +9,7 @@ const { v4: uuid } = require("uuid");
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function EditGiftDetailsCard() {
+	const token = sessionStorage.authToken
 	const navigate = useNavigate();
 	const params_obj = useParams()
 	const giftee_id = params_obj.giftee_id
@@ -39,7 +40,11 @@ export default function EditGiftDetailsCard() {
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}/giftees`)
+			.get(`${API_URL}/giftees`,{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setGifteeList(response.data)
 			})
@@ -48,7 +53,11 @@ export default function EditGiftDetailsCard() {
 			})
 
 		axios
-			.get(`${API_URL}/gifts/${gift_id}`)
+			.get(`${API_URL}/gifts/${gift_id}`,{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setGiftData(response.data[0])
 			})
@@ -170,6 +179,10 @@ export default function EditGiftDetailsCard() {
 					gift_status: giftStatus,
 					order_number: orderNumber,
 					tracking_number: trackingNumber
+				},{
+					headers: {
+						Authorization: `Bearer ${token}`
+					}
 				})
 				.then(() => {
 					navigate(`/${gifteeID}`)

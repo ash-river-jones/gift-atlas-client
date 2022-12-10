@@ -1,7 +1,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.login{
+.sign-up{
     margin: -4rem 1rem 0.3125rem 1rem;
     background-color: $primaryWhite;
     box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
@@ -27,7 +27,7 @@
     }
 }
 
-.login-details{
+.sign-up-details{
     &__wrapper{
         padding: 0rem 1.5rem 1rem 1.5rem ;
         margin-top: 1rem;
@@ -70,10 +70,10 @@
         width: 50%;
 
         &--cancel{
-            @extend .login-details__btn-wrapper;
+            @extend .sign-up-details__btn-wrapper;
         }
         &--submit{
-            @extend .login-details__btn-wrapper;
+            @extend .sign-up-details__btn-wrapper;
         }
     }
 
@@ -86,7 +86,7 @@
         @include m-h3;
 
         &--cancel{
-            @extend .login-details__btn;
+            @extend .sign-up-details__btn;
             background-color: $primaryWhite;
             border: solid 1px $secondaryLight;
             color: $secondaryDark;
@@ -97,7 +97,7 @@
             }
         }
         &--submit{
-            @extend .login-details__btn;
+            @extend .sign-up-details__btn;
             background-color: $primaryLight;
             color: $primaryWhite;
             border: solid 1px $primaryLight;

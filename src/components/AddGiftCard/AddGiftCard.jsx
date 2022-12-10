@@ -35,9 +35,15 @@ export default function AddGiftCard() {
 
 	const [gifteeList, setGifteeList] = useState([])
 
+	const token = sessionStorage.authToken
+
 	useEffect(() => {
 		axios
-			.get(`${API_URL}/giftees`)
+			.get(`${API_URL}/giftees`, {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setGifteeList(response.data)
 			})
@@ -147,7 +153,10 @@ export default function AddGiftCard() {
 					gift_status: giftStatus,
 					order_number: orderNumber,
 					tracking_number: trackingNumber
-				})
+				},{
+					headers: {
+						Authorization: `Bearer ${token}`
+				}})
 				.then(() => {
 					navigate(`/${gifteeID}`)
 				})

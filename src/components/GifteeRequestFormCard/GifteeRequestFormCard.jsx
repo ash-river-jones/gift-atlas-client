@@ -10,6 +10,7 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 
 export default function GifteeRequestFormCard() {
+	const token = sessionStorage.authToken
 	const navigate = useNavigate();
 	const params_obj = useParams()
 	const giftee_id = params_obj.giftee_id
@@ -91,6 +92,10 @@ export default function GifteeRequestFormCard() {
 					gift_status: 'Not Purchased',
 					order_number: '',
 					tracking_number: ''
+				},{
+					headers: {
+						Authorization: `Bearer ${token}`
+					}
 				})
 				.then(() => {
 					navigate(`/about`)

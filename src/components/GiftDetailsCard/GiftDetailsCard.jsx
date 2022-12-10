@@ -10,6 +10,7 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 
 export default function GiftDetailsCard() {
+	const token = sessionStorage.authToken
 	const navigate = useNavigate()
 	const params_obj = useParams()
 	const gift_id = params_obj.gift_id
@@ -22,13 +23,21 @@ export default function GiftDetailsCard() {
 
 	useEffect(() => {
 		axios
-		.get(`${API_URL}/giftees/${giftee_id}`)
+		.get(`${API_URL}/giftees/${giftee_id}`,{
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setGifteeData(response.data[0])
 		})
 
 		axios
-		.get(`${API_URL}/gifts/${gift_id}`)
+		.get(`${API_URL}/gifts/${gift_id}`,{
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setGiftData(response.data[0])
 			setProductLink(response.data[0].product_link)

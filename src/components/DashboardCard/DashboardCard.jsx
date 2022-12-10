@@ -1,4 +1,4 @@
-import './HomeCard.scss';
+import './DashboardCard.scss';
 import GifteeProfileCard from '../GifteeProfileCard/GifteeProfileCard';
 
 import { Link } from 'react-router-dom';
@@ -7,13 +7,18 @@ import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
-export default function HomeCard() {
+export default function DashboardCard() {
+	const token = sessionStorage.authToken
 	const [gifteeData, setGifteeData] = useState([])
 	const [searchInput, setSearchInput] = useState([])
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}/giftees`)
+			.get(`${API_URL}/giftees`,{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setGifteeData(response.data)
 			})

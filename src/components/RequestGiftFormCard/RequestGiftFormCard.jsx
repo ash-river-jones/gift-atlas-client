@@ -11,6 +11,7 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 const CLIENT_URL = process.env.REACT_APP_CLIENT_URL || '';
 
 export default function RequestGiftFormCard() {
+	const token = sessionStorage.authToken
 	const navigate = useNavigate()
 	const params_obj = useParams()
 	const gifteeID = params_obj.giftee_id
@@ -28,7 +29,11 @@ export default function RequestGiftFormCard() {
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}/giftees/${gifteeID}`)
+			.get(`${API_URL}/giftees/${gifteeID}`,{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setGifteeData(response.data[0])
 			})
@@ -44,7 +49,11 @@ export default function RequestGiftFormCard() {
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}/users/${userID}`)
+			.get(`${API_URL}/users/${userID}`,{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			.then((response) => {
 				setUserData(response.data[0])
 			})
@@ -107,7 +116,7 @@ export default function RequestGiftFormCard() {
 			<main className="request-gift">
 				<section className='request-gift__header'>
 					<div className="request-gift__header-wrapper">
-						<Link to={'/'}><img className='request-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
+						<Link to={'/dashboard'}><img className='request-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
 						<h1 className="request-gift__heading">Request a Gift Idea</h1>
 					</div>
 					<form onSubmit={budgetDefined === 'true' ?  sendEmailBudget : sendEmailNoBudget}>

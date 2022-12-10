@@ -3,9 +3,8 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import rightArrow from '../../assets/icons/chevron_right-24px.svg';
 
-import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
