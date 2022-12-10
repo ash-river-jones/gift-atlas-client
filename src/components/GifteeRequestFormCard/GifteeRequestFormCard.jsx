@@ -98,7 +98,7 @@ export default function GifteeRequestFormCard() {
 					}
 				})
 				.then(() => {
-					navigate(`/about`)
+					navigate(`/`)
 				})
 				.catch((err) => {
 					console.log(err)
@@ -112,7 +112,7 @@ export default function GifteeRequestFormCard() {
 			<main className="add-gift">
 				<section className='add-gift__header'>
 					<div className='add-gift__header-wrapper'>
-						<Link to={`/about`}><img className='add-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
+						<Link to={`/`}><img className='add-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
 						<h1 className='add-gift__heading'>Submit Gift Request</h1>
 					</div>
 					<form onSubmit={handelAddGift}>
@@ -154,7 +154,7 @@ export default function GifteeRequestFormCard() {
 							<input type="text" name="product_link" id="product_link" className='add-gift-details__input' value={productLink} placeholder='Product Link' onChange={(e) => {setProductLink(e.target.value)}}/>
 						</div>
 						<div className='add-gift-details__btn-container'>
-							<div className='add-gift-details__btn-wrapper--cancel'><button type="button" className='add-gift-details__btn--cancel' onClick={()=>{navigate(`/about`)}}>Cancel</button></div>
+							<div className='add-gift-details__btn-wrapper--cancel'><button type="button" className='add-gift-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
 							<div className='add-gift-details__btn-wrapper--submit'><button type="submit" className='add-gift-details__btn--submit'>Save</button></div>
 						</div>
 					</form>

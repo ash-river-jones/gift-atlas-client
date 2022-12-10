@@ -20,10 +20,10 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<About />} />                                     // done  // done
-          <Route path='/dashboard' element={<Dashboard />} />                               //       //      // second last priority
-          <Route path='/login' element={<Login />} />                               // done  //      // last priority
-          <Route path='/signup' element={<SignUp />} />
+          <Route path='/' element={<About />} />                                     
+          <Route path='/dashboard' element={<Dashboard />} />                       // done  // 
+          <Route path='/login' element={<Login />} />                               // done  // done 
+          <Route path='/signup' element={<SignUp />} />                             // done  // done
           <Route path='/add' element={<AddGiftee />} />                             // done  // done // checked validation -- fine tune styling
           <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // done  //      // major functionality - fine tuning neccesary -- validation
           <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done  // done // major functionality - fine tuning necessary -- styling 

@@ -95,7 +95,7 @@ export default function RequestGiftFormCard() {
 		e.preventDefault();
 		emailjs.send('service_10j4rpa', 'template_budget', emailParamsBudget, 'Uxre8dykVxvLN5T7z')
 			.then(function(response) {
-				navigate('/about')
+				navigate('/dashboard')
 			}, function(error) {
 				alert('FAILED...', error);
 			})
@@ -104,7 +104,7 @@ export default function RequestGiftFormCard() {
 		e.preventDefault();
 		emailjs.send('service_10j4rpa', 'template_no-budget', emailParamsNoBudget, 'Uxre8dykVxvLN5T7z')
 			.then(function(response) {
-				navigate('/about')
+				navigate('/dashboard')
 			}, function(error) {
 				alert('FAILED...', error);
 			})

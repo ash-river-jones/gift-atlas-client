@@ -8,7 +8,8 @@ export default function PageHeader() {
 	let path = window.location.pathname;
 
 	useEffect(() => {
-		if (path.includes(`/about`)) {
+		console.log(path)
+		if (path === "/") {
 			setAboutPage(true);
 		} else {
 			setAboutPage(false);
@@ -18,10 +19,10 @@ export default function PageHeader() {
 	return (
 		<>
 			<div className='header'>
-				<Link to='/dashboard'><div className='header__logo-wrapper'><img className='header__logo' src={logo} alt='' /></div></Link>
+				<Link to='/'><div className='header__logo-wrapper'><img className='header__logo' src={logo} alt='' /></div></Link>
 				<div className='header__nav'>
 					<Link to='/dashboard'><button className={aboutPage ? 'header__nav-item--inactive' : 'header__nav-item--active'}>Dashboard</button></Link>
-					<div id='about-btn'><Link to='/about'><button className={aboutPage ? 'header__nav-item--active' : 'header__nav-item--inactive'} >About</button></Link></div>
+					<div id='about-btn'><Link to='/'><button className={aboutPage ? 'header__nav-item--active' : 'header__nav-item--inactive'} >About</button></Link></div>
 				</div>
 			</div>
 		</>

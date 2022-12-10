@@ -83,8 +83,9 @@ export default function SignUpCard() {
 							<input type="text" name='password' id='password' className='login-details__input' value={email} placeholder='Enter your password' onChange={(e)=>{setPassword(e.target.value)}} />
 						</div>
 						<div className="sign-up-details__btn-container">
-							<div className="sign-up-details__btn-wrapper--cancel"><button type="button" className='login-details__btn--cancel' onClick={()=>{navigate(`/about`)}}>Cancel</button></div>
-							<div className="sign-up-details__btn-wrapper--submit"><button type="submit" className='login-details__btn--submit'>Login</button></div>
+							<div className="sign-up-details__btn-wrapper--cancel"><button type="button" className='login-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
+							<div className="sign-up-details__btn-wrapper--submit"><button type="button" className='login-details__btn--submit' onClick={()=>{navigate(`/login`)}}>Log In Instead</button></div>
+							<div className="sign-up-details__btn-wrapper--submit"><button type="submit" className='login-details__btn--submit'>Sign Up</button></div>
 						</div>
 					</form>
 				</section>

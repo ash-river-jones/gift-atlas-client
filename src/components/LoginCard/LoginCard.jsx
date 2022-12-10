@@ -76,7 +76,8 @@ export default function LoginCard() {
 							<input type="password" name='password' id='password' className='login-details__input' value={password} placeholder='Enter your password' onChange={(e)=>{setPassword(e.target.value)}} />
 						</div>
 						<div className="login-details__btn-container">
-							<div className="login-details__btn-wrapper--cancel"><button type="button" className='login-details__btn--cancel' onClick={()=>{navigate(`/about`)}}>Cancel</button></div>
+							<div className="login-details__btn-wrapper--cancel"><button type="button" className='login-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
+							<div className="login-details__btn-wrapper--submit"><button type="button" className='login-details__btn--submit' onClick={()=>{navigate(`/signup`)}}>Sign Up Instead</button></div>
 							<div className="login-details__btn-wrapper--submit"><button type="submit" className='login-details__btn--submit'>Login</button></div>
 						</div>
 					</form>
