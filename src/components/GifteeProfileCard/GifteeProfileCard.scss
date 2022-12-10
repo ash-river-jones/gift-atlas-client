@@ -2,7 +2,6 @@
 @use '../../styles/partials/mixins' as *;
 
 .profile{
-    // padding-block: 1rem;
     display: flex;
     justify-content:space-between;
     border-bottom: 1px solid $secondaryLight;

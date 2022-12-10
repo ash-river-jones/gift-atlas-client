@@ -26,8 +26,6 @@ export default function LoginCard() {
 		} else {
 			axios.post(`${API_URL}/login`,loginInfo)
 			.then((response) => {
-				console.log(response.data.authToken)
-				// console.log(response.data.token)
 				if (response.status === 200) {
 					sessionStorage.authToken = response.data.authToken
 					navigate('/dashboard')

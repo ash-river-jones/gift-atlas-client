@@ -78,7 +78,7 @@ export default function GifteeDetailsPageCard() {
 		<>
 			<main className='giftee-deets'>
 				<section className="giftee-deets__header">
-					<div className="giftee-deets__header-section"><Link className='giftee-deets__link' to={`/`}><img src={backArrow} alt="Back Arrow" /></Link><h1 className="giftee-deets__title">{gifteeData.name}</h1></div>
+					<div className="giftee-deets__header-section"><Link className='giftee-deets__link' to={`/dashboard`}><img src={backArrow} alt="Back Arrow" /></Link><h1 className="giftee-deets__title">{gifteeData.name}</h1></div>
 					<div className="giftee-deets__header-section giftee-deets__add-gift"><Link to={`/${giftee_id}/add`}><h3 className='giftee-deets__add-gift details__request-btn'>Add Gift</h3></Link></div>
 					<div className="giftee-deets__header-section giftee-deets__edit"><Link to={`/${giftee_id}/edit`}><img src={editIcon} alt="Edit Giftee Button" className='giftee-deets__edit-icon'/></Link></div>
 				</section>

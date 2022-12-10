@@ -161,7 +161,7 @@ export default function AddGifteeCard() {
 			<main className='add-giftee'>
 				<section className='add-giftee__header'>
 					<div className='add-giftee__header-wrapper'>
-						<Link to={`/`}><img className='add-giftee__back-arrow' src={backArrow} alt="Back arrow to home dashboard" /></Link>
+						<Link to={`/dashboard`}><img className='add-giftee__back-arrow' src={backArrow} alt="Back arrow to dashboard" /></Link>
 						<h1 className='add-giftee__heading'>Add Giftee</h1>
 					</div>
 					<form onSubmit={handleAddGiftee}>
