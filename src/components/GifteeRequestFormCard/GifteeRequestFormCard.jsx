@@ -10,7 +10,6 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 
 export default function GifteeRequestFormCard() {
-	const token = sessionStorage.authToken
 	const navigate = useNavigate();
 	const params_obj = useParams()
 	const giftee_id = params_obj.giftee_id
@@ -80,7 +79,7 @@ export default function GifteeRequestFormCard() {
 			alert(`missing required data to post new gift`)
 		} else {
 			axios
-				.post(`${API_URL}/gifts`,{
+				.post(`${API_URL}/gifts/${user_id}/${giftee_id}`,{
 					gift_id: uuid(),
 					giftee_id: giftee_id,
 					user_id: user_id,
@@ -92,13 +91,9 @@ export default function GifteeRequestFormCard() {
 					gift_status: 'Not Purchased',
 					order_number: '',
 					tracking_number: ''
-				},{
-					headers: {
-						Authorization: `Bearer ${token}`
-					}
 				})
 				.then(() => {
-					navigate(`/`)
+					// navigate(`/`)
 				})
 				.catch((err) => {
 					console.log(err)

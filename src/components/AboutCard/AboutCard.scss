@@ -1,2 +1,166 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.about{
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: $primaryWhite;
+    box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header{
+
+    }
+
+    &__header-wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $secondaryLight;
+        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+    }
+
+    &__heading{
+        @include m-h1;
+        margin-left: .75rem;
+        color: $primaryDark;
+    }
+}
+
+.hero{
+    padding-top: 1rem;
+    // background-color: $backgroundLight;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondaryLight;
+
+
+    &__heading-wrapper{
+        margin-inline: 1.5rem;
+    }
+
+    &__heading{
+        @include m-h2;
+        margin-bottom: .25rem;
+        text-align: center
+    }
+
+    &__subheading-wrapper{
+        margin-inline: 1.5rem;
+    }
+
+    &__subheading{
+
+        @include m-p2;
+        margin-bottom: .25rem;
+        text-align: center
+    }
+
+    &__login-wrapper{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: $backgroundLight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 0px 0px 3px 3px;
+        padding-inline: 1rem;
+    }
+
+    &__signup-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        width: 100%;
+        @include m-h3;
+        background-color: $primaryWhite;
+        border: solid 1px $secondaryLight;
+        color: $secondaryDark;
+
+        &:hover {
+            border: solid $primaryLight 1px;
+            color: $primaryLight;
+        }
+    }
+    
+    &__login-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        width: 100%;
+        @include m-h3;
+        background-color: $primaryLight;
+        color: $primaryWhite;
+        border: solid 1px $primaryLight;
+
+        &:hover {
+            background-color: $backgroundDark;
+            border: solid 1px $backgroundDark;
+        }
+    }
+
+    &__img-wrapper{
+        margin: .75rem 0 .75rem 0;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__img{
+        flex-grow: 1;
+        margin-inline: 2rem;
+    }
+}
+
+.hiw{
+    display: flex;
+    flex-direction: column;
+    // border-bottom: 1px solid $secondaryLight;    
+
+    &__heading-wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $secondaryLight;
+        padding: 2rem 1.5rem 1.25rem 1.5rem ;
+    }
+
+    &__heading{
+        @include m-h2;
+        color: $primaryDark;
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        border-bottom: 1px solid $secondaryLight;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    &__img{
+        align-self: center;
+        margin-bottom: 1rem
+    }
+
+    &__subheader{
+        @include m-h2;
+        color: $primaryDark;
+        margin-bottom: 0.75rem;
+    }
+
+    &__info{
+
+    }
+}

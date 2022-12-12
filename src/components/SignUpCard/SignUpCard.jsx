@@ -32,7 +32,7 @@ export default function SignUpCard() {
 				if (response.status === 201) {
 					console.log(response.data.token)
 					sessionStorage.authToken = response.data.token
-					// navigate('/dashboard')
+					navigate('/login')
 				}
 			})
 			.catch((err) => {
