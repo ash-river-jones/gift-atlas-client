@@ -1,7 +1,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-#about-btn{
+#about-btn {
     margin-bottom: 4.125rem;
 }
 
@@ -24,12 +24,12 @@
         padding-right: 5.625rem;
     }
 
-    &__logo-wrapper{
+    &__logo-wrapper {
         align-self: flex-start;
     }
 
-    &__logo{
-        
+    &__logo {
+
         height: 7.0313rem;
         width: 7.0313rem;
     }
@@ -42,8 +42,7 @@
         padding: 1rem 1rem 1rem 1rem;
         gap: 1rem;
 
-        @include tablet {
-        }
+        @include tablet {}
     }
 
     &__nav-item--active {

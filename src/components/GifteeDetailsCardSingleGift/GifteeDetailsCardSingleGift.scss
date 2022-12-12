@@ -1,9 +1,9 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.single-gift{
+.single-gift {
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -11,59 +11,55 @@
         border-bottom: 1px solid $secondaryLight;
     }
 
-    &__details-top{
+    &__details-top {
         margin-bottom: 1rem;
     }
 
-    &__name{
+    &__name {
         @include m-h3;
 
     }
 
-    &__desc{
+    &__desc {
         @include m-h4;
     }
 
-    &__desc-deets{
+    &__desc-deets {
         @include m-p2;
     }
 
-    &__sides-wrapper{
+    &__sides-wrapper {
         display: flex;
         justify-content: space-between;
     }
 
-    &__side{
+    &__side {
         width: 50%
-
     }
 
-    &__details-section{
+    &__details-section {}
 
-    }
-
-    &__heading{
+    &__heading {
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
     }
 
-    &__info{
+    &__info {
         @include m-p2;
-        &--link{
+
+        &--link {
             @extend .single-gift__info;
         }
     }
 
-    &__info-section{
+    &__info-section {}
 
-    }
-
-    &__delete{
+    &__delete {
         margin-block: 1rem;
     }
 
-    &__edit{
+    &__edit {
         margin-block: 1rem;
         display: flex;
         justify-content: flex-end;

@@ -8,7 +8,7 @@ export default function PageHeader() {
 	let path = window.location.pathname;
 
 	useEffect(() => {
-		if (path === "/") {
+		if (path === "/" || path === "/login" || path === "/signup" ) {
 			setAboutPage(true);
 		} else {
 			setAboutPage(false);

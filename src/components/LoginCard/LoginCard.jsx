@@ -1,6 +1,6 @@
 import './LoginCard.scss';
 import axios from 'axios';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 

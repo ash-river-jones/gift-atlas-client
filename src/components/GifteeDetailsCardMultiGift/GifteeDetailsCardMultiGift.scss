@@ -1,9 +1,9 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.multi-gift{
+.multi-gift {
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         padding: 1rem 1rem 0rem 1rem;
@@ -12,39 +12,34 @@
 
     }
 
-    &__side{
+    &__side {
         width: 50%;
     }
 
-    &__detail-section{
+    &__detail-section {
         margin-bottom: 1rem
     }
 
-    &__heading{
+    &__heading {
         @include m-h4;
         margin-bottom: .25rem
-
     }
 
-    &__info{
+    &__info {
         @include m-p2;
         color: $primaryDark;
     }
 
-    &__info-link{
+    &__info-link {
         color: $primaryLight;
     }
 
-    &__edit{
+    &__edit {
         display: flex;
         justify-content: flex-end;
     }
 
-    &__info-section{
+    &__info-section {}
 
-    }
-
-    &__gift-status{
-
-    }
+    &__gift-status {}
 }

@@ -1,2 +1,63 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.footer {
+    background-color: $backgroundDark;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+
+    &__header {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__heading {
+        @include m-h1;
+        color: $primaryWhite;
+    }
+
+    &__social {}
+
+    &__social-link {}
+
+    &__social-img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &__details {}
+
+    &__name-section {
+        margin-bottom: 1rem;
+    }
+
+    &__name {
+        color: $primaryWhite;
+        @include m-p1;
+        font-weight: 700;
+    }
+
+    &__contact-section {
+        margin-top: 1rem;
+    }
+
+    &__contact {
+        color: $primaryWhite;
+        @include m-p1;
+    }
+
+    &__copy-section {
+        margin-top: 0.5rem;
+    }
+
+    &__copy-logo {
+        height: 7.8125rem;
+        width: 7.8125rem;
+    }
+
+    &__copy-message {
+        color: $primaryWhite;
+        @include m-p3;
+    }
+}

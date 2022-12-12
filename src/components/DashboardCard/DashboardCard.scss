@@ -1,24 +1,25 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.dash{
+.dash {
     margin: -4rem 1rem 0.3125rem 1rem;
     box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
 
 
-    &__header{
+    &__header {
         padding: 2rem 1.5rem 1.5rem 1.5rem;
         background: $primaryWhite;
         border-bottom: 1px solid $secondaryLight;
+
         @include tablet {
             display: flex;
             padding: 2rem 2rem 1.5rem 2rem;
         }
     }
 
-    &__title{
+    &__title {
         color: $primaryDark;
         @include m-h1;
         padding-bottom: 1rem;
@@ -34,15 +35,15 @@
         }
     }
 
-    &__wrapper{
+    &__wrapper {
         width: 100%;
 
         @include tablet {
-        display: flex;
+            display: flex;
         }
     }
 
-    &__search-wrapper{
+    &__search-wrapper {
         padding-bottom: 1rem;
 
         @include tablet {
@@ -52,7 +53,7 @@
         }
     }
 
-    &__search{
+    &__search {
         width: 100%;
         height: 2.25rem;
         background: $primaryWhite;
@@ -68,14 +69,15 @@
         }
     }
 
-    &__new-giftee-wrapper{
+    &__new-giftee-wrapper {
         width: 100%;
-        @include desktop{
+
+        @include desktop {
             width: 65%;
         }
     }
 
-    &__new-giftee-btn{
+    &__new-giftee-btn {
         width: 100%;
         height: 2.25rem;
         color: $primaryWhite;

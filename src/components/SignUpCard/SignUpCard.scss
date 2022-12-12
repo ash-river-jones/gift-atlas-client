@@ -1,35 +1,33 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.sign-up{
+.sign-up {
     margin: -4rem 1rem 0.3125rem 1rem;
     background-color: $primaryWhite;
     box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
 
-    &__header{
+    &__header {}
 
-    }
-
-    &__header-wrapper{
+    &__header-wrapper {
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $secondaryLight;
-        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 
-    &__heading{
+    &__heading {
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
     }
 }
 
-.sign-up-details{
-    &__wrapper{
-        padding: 0rem 1.5rem 1rem 1.5rem ;
+.sign-up-details {
+    &__wrapper {
+        padding: 0rem 1.5rem 1rem 1.5rem;
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
@@ -37,47 +35,45 @@
         border-bottom: 1px solid $secondaryLight;
     }
 
-    &__heading{
+    &__heading {
         @include m-h4;
         margin-bottom: .25rem;
     }
 
-    &__label{
+    &__label {
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
     }
 
-    &__input{
+    &__input {
         height: 2.25rem;
         border: 1px solid $primaryDark;
         border-radius: 1.25rem;
         padding-left: 1rem;
     }
 
-    &__btn-container{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-inline: 1.5rem;
+    &__btn-container {
+        padding: 1.5rem 0.25rem;
         background-color: $backgroundLight;
         display: flex;
-        justify-content: center;
-        gap: 1rem;
+        justify-content: space-evenly;
+        gap: 0.5rem;
         border-radius: 0px 0px 3px 3px;
     }
 
-    &__btn-wrapper{
-        width: 50%;
+    &__btn-wrapper {
 
-        &--cancel{
+        &--cancel {
             @extend .sign-up-details__btn-wrapper;
         }
-        &--submit{
+
+        &--submit {
             @extend .sign-up-details__btn-wrapper;
         }
     }
 
-    &__btn{
+    &__btn {
         height: 2.25rem;
         padding: 0 1rem;
         border-radius: 1.25rem;
@@ -85,22 +81,24 @@
         width: 100%;
         @include m-h3;
 
-        &--cancel{
+        &--cancel {
             @extend .sign-up-details__btn;
             background-color: $primaryWhite;
             border: solid 1px $secondaryLight;
             color: $secondaryDark;
-    
+
             &:hover {
                 border: solid $primaryLight 1px;
                 color: $primaryLight;
             }
         }
-        &--submit{
+
+        &--submit {
             @extend .sign-up-details__btn;
             background-color: $primaryLight;
             color: $primaryWhite;
             border: solid 1px $primaryLight;
+
             &:hover {
                 background-color: $backgroundDark;
                 border: solid 1px $backgroundDark;

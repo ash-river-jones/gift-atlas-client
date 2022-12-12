@@ -1,6 +1,6 @@
 import './SignUpCard.scss';
 import axios from 'axios';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 
@@ -76,7 +76,7 @@ export default function SignUpCard() {
 						<div className="sign-up-details__wrapper">
 							<h2 className="sign-up-details__heading">Sign Up Details</h2>
 							<label htmlFor="user_name" className='login-details__label'>Name</label>
-							<input type="text" name='user_name' id='user_name' className='login-details__input' value={name} placeholder='FirstName LastName' onChange={(e)=>{setName(e.target.value)}} />
+							<input type="text" name='user_name' id='user_name' className='login-details__input' value={name} placeholder='Enter your Name' onChange={(e)=>{setName(e.target.value)}} />
                             <label htmlFor="email" className='login-details__label'>Email</label>
 							<input type="text" name='email' id='email' className='login-details__input' value={email} placeholder='example@example.com' onChange={(e)=>{setEmail(e.target.value)}} />
 							<label htmlFor="password" className='login-details__label'>Password</label>

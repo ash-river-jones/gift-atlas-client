@@ -1,50 +1,46 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.profile{
+.profile {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     border-bottom: 1px solid $secondaryLight;
 
 
-    &__side{
+    &__side {
         margin-left: 1.5rem;
         width: 50%;
     }
 
-    &__section{
+    &__section {
         margin-block: 1rem;
     }
 
-    &__table-heading{
+    &__table-heading {
         @include m-h4;
     }
 
-    &__info-section{
+    &__info-section {
         display: flex;
     }
 
-    &__name{
+    &__name {
         @include m-h3;
         color: $primaryLight;
     }
 
-    &__info{
+    &__info {
         @include m-p2;
     }
 
-    &__delete{
+    &__delete {}
 
-    }
-
-    &__edit{
+    &__edit {
         display: flex;
         justify-content: flex-end;
         margin-right: 1.5rem;
     }
-    
-    &__order-status{
 
-    }
-    
+    &__order-status {}
+
 }

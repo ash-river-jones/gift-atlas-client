@@ -1,33 +1,31 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.about{
+.about {
     margin: -4rem 1rem 0.3125rem 1rem;
     background-color: $primaryWhite;
     box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
 
-    &__header{
+    &__header {}
 
-    }
-
-    &__header-wrapper{
+    &__header-wrapper {
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $secondaryLight;
-        padding: 2rem 1.5rem 1.5rem 1.5rem ;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 
-    &__heading{
+    &__heading {
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
     }
 }
 
-.hero{
+.hero {
     padding-top: 1rem;
     // background-color: $backgroundLight;
     display: flex;
@@ -36,28 +34,28 @@
     border-bottom: 1px solid $secondaryLight;
 
 
-    &__heading-wrapper{
+    &__heading-wrapper {
         margin-inline: 1.5rem;
     }
 
-    &__heading{
+    &__heading {
         @include m-h2;
         margin-bottom: .25rem;
         text-align: center
     }
 
-    &__subheading-wrapper{
+    &__subheading-wrapper {
         margin-inline: 1.5rem;
     }
 
-    &__subheading{
+    &__subheading {
 
         @include m-p2;
         margin-bottom: .25rem;
         text-align: center
     }
 
-    &__login-wrapper{
+    &__login-wrapper {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         background-color: $backgroundLight;
@@ -69,7 +67,7 @@
         padding-inline: 1rem;
     }
 
-    &__signup-btn{
+    &__signup-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -88,8 +86,8 @@
             color: $primaryLight;
         }
     }
-    
-    &__login-btn{
+
+    &__login-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -109,38 +107,38 @@
         }
     }
 
-    &__img-wrapper{
+    &__img-wrapper {
         margin: .75rem 0 .75rem 0;
         display: flex;
         justify-content: center;
 
     }
 
-    &__img{
+    &__img {
         flex-grow: 1;
         margin-inline: 2rem;
     }
 }
 
-.hiw{
+.hiw {
     display: flex;
     flex-direction: column;
     // border-bottom: 1px solid $secondaryLight;    
 
-    &__heading-wrapper{
+    &__heading-wrapper {
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $secondaryLight;
-        padding: 2rem 1.5rem 1.25rem 1.5rem ;
+        padding: 2rem 1.5rem 1.25rem 1.5rem;
     }
 
-    &__heading{
+    &__heading {
         @include m-h2;
         color: $primaryDark;
     }
 
-    &__section{
+    &__section {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -149,18 +147,19 @@
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
-    &__img{
+    &__img {
         align-self: center;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
+        max-width: calc(100vw - 5rem);
+        border-radius: .5rem;
+        box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     }
 
-    &__subheader{
+    &__subheader {
         @include m-h2;
         color: $primaryDark;
         margin-bottom: 0.75rem;
     }
 
-    &__info{
-
-    }
+    &__info {}
 }

@@ -1,6 +1,7 @@
 import './AboutCard.scss';
 import iconCombo from '../../assets/icons/icon-combo.svg';
-import { useNavigate, Link } from 'react-router-dom';
+import holidayStress from '../../assets/images/gift-stress.jpeg'
+import { useNavigate } from 'react-router-dom';
 
 export default function AboutCard() {
 	const navigate = useNavigate()
@@ -33,7 +34,7 @@ export default function AboutCard() {
 						<h2 className='hiw__heading'>How It Works</h2>
 					</div>
 					<div className="hiw__section">
-						<img src="" alt="Placeholder img" className="hiw__img" />
+						<img src={holidayStress} alt="Placeholder img" className="hiw__img" />
 						<h3 className="hiw__subheader">Placeholder</h3>
 						<p className="hiw__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos voluptatum natus accusamus ex nostrum quia provident ea iste porro neque ducimus magnam, sit, obcaecati officiis molestias veniam nihil magni.</p>
 					</div>

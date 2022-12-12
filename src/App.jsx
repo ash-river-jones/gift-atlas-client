@@ -4,9 +4,11 @@ import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
 import AddGiftee from './pages/AddGiftee/AddGiftee'
 import GifteeDetails from './pages/GifteeDetails/GifteeDetails'
+import DeleteGiftee from './pages/DeleteGiftee/DeleteGiftee'
 import EditGifteeDetails from './pages/EditGifteeDetails/EditGifteeDetails'
 import AddGift from './pages/AddGift/AddGift'
 import GiftDetails from './pages/GiftDetails/GiftDetails'
+import DeleteGift from './pages/DeleteGift/DeleteGift'
 import EditGiftDetails from './pages/EditGiftDetails/EditGiftDetails'
 import GifteeRequestForm from './pages/GifteeRequestForm/GifteeRequestForm'
 import RequestGiftForm from './pages/RequestGiftForm/RequestGiftForm'
@@ -20,16 +22,18 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<About />} />                                     
+          <Route path='/' element={<About />} />                                    // done  // need to add info where placeholders are
           <Route path='/dashboard' element={<Dashboard />} />                       // done  // 
           <Route path='/login' element={<Login />} />                               // done  // done 
           <Route path='/signup' element={<SignUp />} />                             // done  // done
           <Route path='/add' element={<AddGiftee />} />                             // done  // done // checked validation -- fine tune styling
           <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    // done  //      // major functionality - fine tuning neccesary -- validation
           <Route path='/:giftee_id' element={<GifteeDetails />} />                  // done  // done // major functionality - fine tuning necessary -- styling 
+          <Route path='/:giftee_id/delete' element={<DeleteGiftee />} />
           <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         // done  //      // fine tuning neccesary -- validation
           <Route path='/:giftee_id/add' element={<AddGift />}/>                     // done  //      // fine tuning neccesary -- validation
           <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            // done  //      //
+          <Route path='/:giftee_id/:gift_id/delete' element={<DeleteGift />} />
           <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  // done  //      // fine tuning neccesary -- validation
           <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} /> // done  //      // fine tuning necessary -- validation and confirm that necessary feilds are there
         </Routes>
@@ -38,8 +42,7 @@ export default function App() {
   );
 }
 
-
-// check if updating axios calls to include user ID (that lives in .env) 
+// finish page footer
 
 // use valid email and valid phone number functions 
 
