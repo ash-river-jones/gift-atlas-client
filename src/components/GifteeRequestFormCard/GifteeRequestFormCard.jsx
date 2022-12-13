@@ -24,7 +24,7 @@ export default function GifteeRequestFormCard() {
 	const [itemNameError, setItemNameError] = useState(null)
 	const [itemDescriptionError, setItemDescriptionError] = useState(null)
 	const [retailerError, setRetailerError] = useState(null)
-	const [productLinkError, setProductLinkError] = useState(null)
+	const [_productLinkError, setProductLinkError] = useState(null)
 	const [priceError, setPriceError] = useState(null)
 
 	useEffect(() => {

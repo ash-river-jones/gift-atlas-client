@@ -24,7 +24,7 @@ export default function EditGifteeDetailsCard() {
 		.then((response) => {
 			setGifteeData(response.data[0])
 		})
-	},[giftee_id])
+	},[giftee_id, token])
 
 	const [name, setName] = useState('')
 	const [relationship, setRelationship] = useState('')
@@ -42,8 +42,8 @@ export default function EditGifteeDetailsCard() {
 	const [nextHolidayError, setNextHolidayError] = useState(null)
 	const [nextHolidayDateError, setNextHolidayDateError] = useState(null)
 	const [emailError, setEmailError] = useState(null)
-	const [phoneError, setPhoneError] = useState(null)
-	const [addressError, setAddressError] = useState(null)
+	const [_phoneError, setPhoneError] = useState(null)
+	const [_addressError, setAddressError] = useState(null)
 	const [giftFormOptInError, setGiftFormOptInError] = useState(null)
 
 	useEffect(() => {

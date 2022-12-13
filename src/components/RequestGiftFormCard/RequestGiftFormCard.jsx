@@ -1,11 +1,9 @@
 import './RequestGiftFormCard.scss';
 import backArrow from "../../assets/icons/arrow_back-24px.svg"
-import error from '../../assets/icons/error-24px.svg'
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
-const { v4: uuid } = require("uuid");
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 const CLIENT_URL = process.env.REACT_APP_CLIENT_URL || '';
@@ -37,7 +35,7 @@ export default function RequestGiftFormCard() {
 			.then((response) => {
 				setGifteeData(response.data[0])
 			})
-	},[gifteeID])
+	},[gifteeID, token])
 
 	useEffect(() => {
 		if(gifteeData){
@@ -45,7 +43,7 @@ export default function RequestGiftFormCard() {
 			setGifteeName(gifteeData.name)
 			setGifteeEmail(gifteeData.email)	
 		}
-	},[gifteeData])
+	},[gifteeData, token])
 
 	useEffect(() => {
 		axios
@@ -58,7 +56,7 @@ export default function RequestGiftFormCard() {
 				setUserData(response.data[0])
 			})
 
-	},[userID])
+	},[userID, token])
 
 	useEffect(() => {
 		if(userData){

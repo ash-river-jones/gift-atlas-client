@@ -4,7 +4,6 @@ import error from '../../assets/icons/error-24px.svg'
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-const { v4: uuid } = require("uuid");
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
@@ -64,7 +63,7 @@ export default function EditGiftDetailsCard() {
 			.catch((err) => {
 				console.log(err)
 			})
-	},[gift_id])
+	},[gift_id, token])
 
 	useEffect(() => {
 		setItemName(giftData.item_name)

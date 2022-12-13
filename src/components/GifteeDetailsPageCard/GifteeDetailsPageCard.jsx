@@ -2,7 +2,7 @@ import './GifteeDetailsPageCard.scss';
 import GifteeDetailsCardMultiGift from '../GifteeDetailsCardMultiGift/GifteeDetailsCardMultiGift'
 import GifteeDetailsCardSingleGift from '../GifteeDetailsCardSingleGift/GifteeDetailsCardSingleGift'
 import { useParams, Link } from 'react-router-dom';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import calcDaysTo from '../../utils/utils'
@@ -17,7 +17,7 @@ export default function GifteeDetailsPageCard() {
 	const [gifteeData, setGifteeData] = useState([])
 	const [gifteeGifts, setGifteeGifts] = useState([])
 	const [hasMultipleGifts, setHasMultipleGifts] = useState(false)
-	const [gifteeEmailValid, setGifteeEmailValid] = useState(false)
+	const [_gifteeEmailValid, setGifteeEmailValid] = useState(false)
 	const [hasZeroGifts, setHasZeroGifts] = useState(true)
 	const [next_holiday_date, setNext_holiday_date] = useState('')
 	const [birthday, setBirthday] = useState('')
@@ -45,7 +45,7 @@ export default function GifteeDetailsPageCard() {
 		.then((response) => {
 			setGifteeGifts(response.data)
 		})
-	},[giftee_id])
+	},[giftee_id, token])
 
 	useEffect(() => {
 		if(gifteeGifts.length === 0) {

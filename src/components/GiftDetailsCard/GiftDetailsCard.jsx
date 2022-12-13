@@ -2,7 +2,7 @@ import './GiftDetailsCard.scss';
 import backArrow from "../../assets/icons/arrow_back-24px.svg"
 import editIcon from '../../assets/icons/edit-24px-inverted.svg'
 
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -11,7 +11,6 @@ const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
 export default function GiftDetailsCard() {
 	const token = sessionStorage.authToken
-	const navigate = useNavigate()
 	const params_obj = useParams()
 	const gift_id = params_obj.gift_id
 	const giftee_id = params_obj.giftee_id
@@ -42,7 +41,7 @@ export default function GiftDetailsCard() {
 			setGiftData(response.data[0])
 			setProductLink(response.data[0].product_link)
 		})
-	},[])
+	},[gift_id, giftee_id, token])
 
 	useEffect(() => {
 		if(!productLink.includes(`https://`)){

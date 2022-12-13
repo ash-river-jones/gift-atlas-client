@@ -50,7 +50,7 @@ export default function AddGiftCard() {
 			.catch((err) => {
 				console.log(err)
 			})
-	},[])
+	},[token])
 
 	useEffect(() => {
 		if (itemName === '') {

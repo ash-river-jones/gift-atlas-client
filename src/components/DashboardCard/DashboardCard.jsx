@@ -23,7 +23,7 @@ export default function DashboardCard() {
 				setGifteeData(response.data)
 			})
 			.catch((err) => {console.log(err)})
-	},[])
+	},[token])
 	
 	return (
 		<>

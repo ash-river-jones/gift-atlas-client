@@ -30,8 +30,8 @@ export default function AddGifteeCard() {
 	const [nextHolidayError, setNextHolidayError] = useState(null)
 	const [nextHolidayDateError, setNextHolidayDateError] = useState(null)
 	const [emailError, setEmailError] = useState(null)
-	const [phoneError, setPhoneError] = useState(null)
-	const [addressError, setAddressError] = useState(null)
+	const [_phoneError, setPhoneError] = useState(null)
+	const [_addressError, setAddressError] = useState(null)
 	const [giftFormOptInError, setGiftFormOptInError] = useState(null)
 
 	function validatecontact_phoneNumber(number) {

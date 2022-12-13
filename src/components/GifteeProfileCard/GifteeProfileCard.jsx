@@ -33,7 +33,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     setHasPurchasedGifts(false)
                 }
             })
-    }, [giftee_id])
+    }, [giftee_id, token])
 
     return (
 		<>

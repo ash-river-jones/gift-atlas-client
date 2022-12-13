@@ -1,14 +1,12 @@
 import './GifteeDetailsCardSingleGift.scss';
 import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
-import rightArrow from '../../assets/icons/chevron_right-24px.svg';
 
 import { Link } from 'react-router-dom';
 
 
-const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
-export default function GifteeDetailsCardSingleGift({ giftee_name, gift_id, giftee_id, user_id, gift_status, item_description, item_name, order_number, price, product_link, retailer, tracking_number }) {
+export default function GifteeDetailsCardSingleGift({ giftee_name, gift_id, giftee_id, gift_status, item_description, item_name, order_number, price, retailer, tracking_number }) {
 
 	return (
 		<>

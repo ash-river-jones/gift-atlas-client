@@ -1,10 +1,8 @@
 import './DeleteGifteeCard.scss';
 import backArrow from "../../assets/icons/arrow_back-24px.svg"
-import error from '../../assets/icons/error-24px.svg'
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-const { v4: uuid } = require("uuid");
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 
