@@ -4,10 +4,11 @@
 .multi-gift {
 
     &__wrapper {
+        background-color: #fffffe;
         display: flex;
         justify-content: space-between;
         padding: 1rem 1rem 0rem 1rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
     }
 
     &__side {
@@ -21,6 +22,7 @@
     &__heading {
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
         
         @include tablet{
             @include dt-h4;
@@ -29,7 +31,7 @@
 
     &__info {
         @include m-p2;
-        color: $primaryDark;
+        color: #00473e;
 
         @include tablet{
             @include dt-p2;
@@ -37,7 +39,7 @@
     }
 
     &__info-link {
-        color: $primaryLight;
+        color: #d8779a;
     }
 
     &__edit {

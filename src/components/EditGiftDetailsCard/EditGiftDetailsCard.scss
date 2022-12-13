@@ -3,7 +3,7 @@
 
 .edit-gift {
     margin: -4rem 1rem 0.3125rem 1rem;
-    background-color: $primaryWhite;
+    background-color: #fffffe;
     box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
         padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 
@@ -27,7 +27,7 @@
     &__heading {
         @include m-h1;
         margin-left: .75rem;
-        color: $primaryDark;
+        color: #00473e;
 
         @include tablet{
             @include dt-h1;
@@ -42,12 +42,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
     }
 
     &__header {
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
 
         @include tablet{
             @include dt-h4;
@@ -58,6 +59,7 @@
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
 
         @include tablet{
             @include dt-h4;
@@ -70,6 +72,8 @@
         margin-bottom: .25rem;
         display: flex;
         flex-direction: row;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h4;
@@ -79,7 +83,7 @@
     &__radio {}
 
     &__text-area {
-        border: 1px solid $primaryDark;
+        border: 1px solid #475d5b;
         border-radius: 1.25rem;
         padding: 1rem;
         resize: none;
@@ -87,7 +91,7 @@
 
     &__input {
         height: 2.25rem;
-        border: 1px solid $primaryDark;
+        border: 1px solid #475d5b;
         border-radius: 1.25rem;
         padding-left: 1rem;
     }
@@ -95,13 +99,13 @@
     &__select-wrapper {
         width: 100%;
         height: 2.25rem;
-        border: 1px solid $primaryDark;
+        border: 1px solid #475d5b;
         border-radius: 1.25rem;
         padding: 0.25rem 1rem;
         font-size: 0.8125rem;
         cursor: pointer;
-        background-color: $primaryLight;
-        background-image: linear-gradient(to top, $backgroundLight, $primaryWhite 33%);
+        background-color: #fffffe;
+        background-image: linear-gradient(to top, #f2f7f5, #fffffe 33%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -118,7 +122,7 @@
             content: "";
             width: 0.8rem;
             height: 0.5rem;
-            background-color: $secondaryDark;
+            background-color: #475d5b;
             clip-path: polygon(100% 0%, 0 0%, 50% 100%);
         }
 
@@ -128,7 +132,7 @@
             left: -1px;
             right: -1px;
             bottom: -1px;
-            border: 1px solid $primaryDark;
+            border: 1px solid #475d5b;
             border-radius: inherit;
         }
     }
@@ -143,7 +147,7 @@
         cursor: inherit;
         line-height: inherit;
         outline: none;
-        color: $secondaryDark;
+        color: #475d5b;
 
         &::-ms-expand {
             display: none;
@@ -156,7 +160,7 @@
         left: -1px;
         right: -1px;
         bottom: -1px;
-        border: 1px solid $primaryDark;
+        border: 1px solid #00473e;
         border-radius: inherit;
     }
 
@@ -200,7 +204,7 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         padding-inline: 1.5rem;
-        background-color: $backgroundLight;
+        background-color: #f2f7f5;
         display: flex;
         justify-content: center;
         gap: 1rem;
@@ -233,25 +237,23 @@
 
         &--cancel {
             @extend .edit-gift-details__btn;
-            background-color: $primaryWhite;
-            border: solid 1px $secondaryLight;
-            color: $secondaryDark;
+            background-color:  #ffa8ba;
+            border: solid 1px #00332c;
+            color: #00473e;
 
             &:hover {
-                border: solid $primaryLight 1px;
-                color: $primaryLight;
+                border: solid #00473e 1px;
             }
         }
 
         &--submit {
             @extend .edit-gift-details__btn;
-            background-color: $primaryLight;
-            color: $primaryWhite;
-            border: solid 1px $primaryLight;
+            background-color: #faae2b;
+            color: #00473e;
+            border: solid 1px #00332c;
 
             &:hover {
-                background-color: $backgroundDark;
-                border: solid 1px $backgroundDark;
+                border: solid 1px #00473e;
             }
         }
     }

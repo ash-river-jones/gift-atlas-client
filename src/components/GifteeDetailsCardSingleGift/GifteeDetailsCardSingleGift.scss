@@ -4,11 +4,12 @@
 .single-gift {
 
     &__wrapper {
+        background-color: #fffffe;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 1rem 1rem 0rem 1rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
     }
 
     &__details-top {
@@ -17,6 +18,8 @@
 
     &__name {
         @include m-h3;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h3;
@@ -26,6 +29,8 @@
 
     &__desc {
         @include m-h4;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h4;
@@ -34,6 +39,8 @@
 
     &__desc-deets {
         @include m-p2;
+        color: #475d5b;
+
 
         @include tablet{
             @include dt-p2;
@@ -55,6 +62,8 @@
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h4;
@@ -63,6 +72,8 @@
 
     &__info {
         @include m-p2;
+        color: #475d5b;
+
 
         @include tablet{
             @include dt-p2;

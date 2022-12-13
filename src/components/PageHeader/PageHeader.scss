@@ -3,11 +3,14 @@
 
 #about-btn {
     margin-bottom: 4.125rem;
+    @include tablet{
+        margin-bottom: 6.5rem;
+    }
 }
 
 .header {
     display: flex;
-    background-color: $backgroundDark;
+    background-color: #f2f7f5;
     justify-content: space-between;
     z-index: 1;
     padding: 0rem 2rem;
@@ -43,36 +46,47 @@
         padding: 1rem 1rem 1rem 1rem;
         gap: 1rem;
 
-        @include tablet {}
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
     &__nav-item--active {
         width: 8.125rem;
         height: 2.25rem;
         border-radius: 1.25rem;
-        border: none;
-        background-color: $primaryDark;
-        color: $primaryWhite;
+        border: solid 1px #00332c;
+        background-color: #faae2b;
+        color: #00473e;
         padding-inline: 2rem;
+        font-weight: 700;
+        @include tablet{
+            height: 2.375rem;
+        }
 
         &:hover {
-            background-color: $primaryDark;
-            color: $primaryWhite;
+            background-color: #faae2b;
+            color: #00473e;
         }
     }
 
     &__nav-item--inactive {
-        background-color: $secondaryDark;
-        color: $secondaryLight;
+        background-color: #faae2b;
+        color: #00473e;
         width: 8.125rem;
         height: 2.25rem;
         border-radius: 1.25rem;
-        border: none;
+        border: solid 1px #00332c;
         padding-inline: 2rem;
+        font-weight: 700;
+
+        @include tablet{
+            height: 2.375rem;
+        }
 
         &:hover {
-            background-color: $primaryDark;
-            color: $primaryWhite;
+            background-color: #faae2b;
+            color: #00473e;
         }
     }
 }

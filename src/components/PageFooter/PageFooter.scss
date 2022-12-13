@@ -2,19 +2,23 @@
 @use '../../styles/partials/mixins' as *;
 
 .footer {
-    background-color: $backgroundDark;
+    background-color: #f2f7f5;
     padding: 1.5rem 1rem;
     margin-top: 1rem;
 
     &__header {
         margin-bottom: 1.5rem;
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
+        
+        @include tablet {
+            margin-bottom: 0.5rem
+        }
     }
 
     &__heading {
         @include m-h1;
-        color: $primaryWhite;
+        color: #00473e;
 
         @include tablet{
             @include dt-h1;
@@ -30,14 +34,16 @@
         width: 3rem;
     }
 
-    &__details {}
+    &__details {
+        
+    }
 
     &__name-section {
         margin-bottom: 1rem;
     }
 
     &__name {
-        color: $primaryWhite;
+        color: #475d5b;
         @include m-p1;
         font-weight: 700;
 
@@ -51,7 +57,7 @@
     }
 
     &__contact {
-        color: $primaryWhite;
+        color: #475d5b;;
         @include m-p1;
 
         @include tablet{
@@ -61,6 +67,12 @@
 
     &__copy-section {
         margin-top: 0.5rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
     }
 
     &__copy-logo {
@@ -69,11 +81,18 @@
     }
 
     &__copy-message {
-        color: $primaryWhite;
+        color: #475d5b;;
         @include m-p3;
 
         @include tablet{
             @include dt-p3;
+        }
+    }
+
+    &__body{
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }

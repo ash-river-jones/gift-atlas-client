@@ -4,7 +4,9 @@
 .profile {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $secondaryLight;
+    border-bottom: 1px solid #d7e2ea;
+    background-color: #fffffe;
+
 
 
     &__side {
@@ -18,6 +20,8 @@
 
     &__table-heading {
         @include m-h4;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h4;
@@ -30,7 +34,7 @@
 
     &__name {
         @include m-h3;
-        color: $primaryLight;
+        color: #d8779a;
 
         @include tablet{
             @include dt-h3;
@@ -39,6 +43,7 @@
 
     &__info {
         @include m-p2;
+        color: #475d5b;
 
         @include tablet{
             @include dt-p2;

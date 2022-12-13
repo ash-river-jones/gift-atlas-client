@@ -3,7 +3,7 @@
 
 .edit-giftee {
     margin: -4rem 1rem 0.3125rem 1rem;
-    background-color: $primaryWhite;
+    background-color: #fffffe;
     box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
         padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 
@@ -27,7 +27,7 @@
     &__heading {
         @include m-h1;
         margin-left: .75rem;
-        color: $primaryDark;
+        color: #00473e;
 
         @include tablet{
             @include dt-h1;
@@ -42,12 +42,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
     }
 
     &__heading {
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
 
         @include tablet{
             @include dt-h4;
@@ -58,6 +59,7 @@
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
 
         @include tablet{
             @include dt-h4;
@@ -66,7 +68,7 @@
 
     &__input {
         height: 2.25rem;
-        border: 1px solid $primaryDark;
+        border: 1px solid #475d5b;
         border-radius: 1.25rem;
         padding-left: 1rem;
     }
@@ -76,12 +78,19 @@
         gap: 1rem;
     }
 
-    &__radio-container {}
+    &__radio-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__radio-label {
         margin-top: .5rem;
         @include m-h4;
         margin-bottom: .25rem;
+        color: #00473e;
+        display: flex;
+        flex-direction: row;
 
         @include tablet{
             @include dt-h4;
@@ -128,7 +137,7 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         padding-inline: 1.5rem;
-        background-color: $backgroundLight;
+        background-color: #f2f7f5;
         display: flex;
         justify-content: center;
         gap: 1rem;
@@ -161,25 +170,23 @@
 
         &--cancel {
             @extend .edit-giftee-details__btn;
-            background-color: $primaryWhite;
-            border: solid 1px $secondaryLight;
-            color: $secondaryDark;
+            background-color:  #ffa8ba;
+            border: solid 1px #00332c;
+            color: #00473e;
 
             &:hover {
-                border: solid $primaryLight 1px;
-                color: $primaryLight;
+                border: solid #00473e 1px;
             }
         }
 
         &--submit {
             @extend .edit-giftee-details__btn;
-            background-color: $primaryLight;
-            color: $primaryWhite;
-            border: solid 1px $primaryLight;
+            background-color: #faae2b;
+            color: #00473e;
+            border: solid 1px #00332c;
 
             &:hover {
-                background-color: $backgroundDark;
-                border: solid 1px $backgroundDark;
+                border: solid 1px #00473e;
             }
         }
     }

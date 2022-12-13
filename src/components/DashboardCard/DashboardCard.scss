@@ -3,6 +3,7 @@
 
 .dash {
     margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: #fffffe;
     box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
@@ -10,8 +11,8 @@
 
     &__header {
         padding: 2rem 1.5rem 1.5rem 1.5rem;
-        background: $primaryWhite;
-        border-bottom: 1px solid $secondaryLight;
+        background-color: #fffffe;
+        border-bottom: 1px solid #d7e2ea;
 
         @include tablet {
             display: flex;
@@ -20,18 +21,13 @@
     }
 
     &__title {
-        color: $primaryDark;
+        color: #00473e;
         @include m-h1;
         padding-bottom: 1rem;
 
         @include tablet {
             @include dt-h1;
-            padding-right: 6.25rem;
             padding-bottom: 0;
-        }
-
-        @include desktop {
-            padding-right: 19.4375rem;
         }
     }
 
@@ -56,8 +52,8 @@
     &__search {
         width: 100%;
         height: 2.25rem;
-        background: $primaryWhite;
-        border: 1px solid $secondaryLight;
+        background-color: #fffffe;
+        border: 1px solid #475d5b;
         border-radius: 1.25rem;
         padding-left: 1.125rem;
         background-image: url("../../assets/icons/search-24px.svg");
@@ -80,19 +76,20 @@
     &__new-giftee-btn {
         width: 100%;
         height: 2.25rem;
-        color: $primaryWhite;
+        color: #00473e;
         font-weight: 600;
-        background: $backgroundDark;
+        background-color: #faae2b;
         border-radius: 1.25rem;
-        border: hidden;
+        border: none;
         display: flex;
         justify-content: space-around;
         align-items: center;
         @include m-p2;
+        font-weight: 700;
+
 
         @include tablet {
             @include dt-p2;
-            font-weight: 600;
             height: 2.375rem;
         }
     }

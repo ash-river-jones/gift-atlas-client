@@ -3,7 +3,7 @@
 
 .about {
     margin: -4rem 1rem 0.3125rem 1rem;
-    background-color: $primaryWhite;
+    background-color: #fffffe;
     box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
     top: 0;
     border-radius: 3px;
@@ -14,14 +14,14 @@
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
         padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 
     &__heading {
         @include m-h1;
         margin-left: .75rem;
-        color: $primaryDark;
+        color: #00473e;
 
         @include tablet{
             @include dt-h1;
@@ -31,11 +31,10 @@
 
 .hero {
     padding-top: 1rem;
-    // background-color: $backgroundLight;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid $secondaryLight;
+    border-bottom: 1px solid #d7e2ea;
 
 
     &__heading-wrapper {
@@ -46,6 +45,8 @@
         @include m-h2;
         margin-bottom: .25rem;
         text-align: center;
+        color: #00473e;
+
 
         @include tablet{
             @include dt-h2;
@@ -60,6 +61,8 @@
         @include m-p2;
         margin-bottom: .25rem;
         text-align: center;
+        color: #475d5b;
+
 
         @include tablet{
             @include dt-p2;
@@ -69,7 +72,7 @@
     &__login-wrapper {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        background-color: $backgroundLight;
+        background-color: #f2f7f5;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -88,17 +91,16 @@
         text-decoration: none;
         width: 100%;
         @include m-h3;
-        background-color: $primaryWhite;
-        border: solid 1px $secondaryLight;
-        color: $secondaryDark;
+        background-color:  #ffa8ba;
+        border: solid 1px #00332c;
+        color: #00473e;
         
         @include tablet{
             @include dt-h3;
         }
 
         &:hover {
-            border: solid $primaryLight 1px;
-            color: $primaryLight;
+            border: solid #00473e 1px;
         }
     }
 
@@ -112,16 +114,15 @@
         text-decoration: none;
         width: 100%;
         @include m-h3;
-        background-color: $primaryLight;
-        color: $primaryWhite;
-        border: solid 1px $primaryLight;
+        background-color: #faae2b;
+        color: #00473e;
+        border: solid 1px #00332c;
         @include tablet{
             @include dt-h3;
         }
 
         &:hover {
-            background-color: $backgroundDark;
-            border: solid 1px $backgroundDark;
+            border: solid 1px #00473e;
         }
     }
 
@@ -141,19 +142,18 @@
 .hiw {
     display: flex;
     flex-direction: column;
-    // border-bottom: 1px solid $secondaryLight;    
 
     &__heading-wrapper {
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
         padding: 2rem 1.5rem 1.25rem 1.5rem;
     }
 
     &__heading {
         @include m-h2;
-        color: $primaryDark;
+        color: #00473e;
         
         @include tablet{
             @include dt-h2;
@@ -164,8 +164,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
-        border-bottom: 1px solid $secondaryLight;
+        border-bottom: 1px solid #d7e2ea;
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
@@ -179,7 +178,7 @@
 
     &__subheader {
         @include m-h2;
-        color: $primaryDark;
+        color: #00473e;
         margin-bottom: 0.75rem;
 
         @include tablet{
@@ -189,6 +188,8 @@
 
     &__info {
         @include m-p2;
+        color: #475d5b;
+
 
         @include tablet{
             @include dt-p2;
