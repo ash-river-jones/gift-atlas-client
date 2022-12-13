@@ -8,8 +8,6 @@
         justify-content: space-between;
         padding: 1rem 1rem 0rem 1rem;
         border-bottom: 1px solid $secondaryLight;
-
-
     }
 
     &__side {
@@ -22,12 +20,20 @@
 
     &__heading {
         @include m-h4;
-        margin-bottom: .25rem
+        margin-bottom: .25rem;
+        
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__info {
         @include m-p2;
         color: $primaryDark;
+
+        @include tablet{
+            @include dt-p2;
+        }
     }
 
     &__info-link {

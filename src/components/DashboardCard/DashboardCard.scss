@@ -88,6 +88,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include m-p2;
 
         @include tablet {
             @include dt-p2;

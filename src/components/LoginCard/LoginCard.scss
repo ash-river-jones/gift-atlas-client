@@ -22,6 +22,10 @@
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
+
+        @include tablet{
+            @include dt-h1;
+        }
     }
 }
 
@@ -38,12 +42,20 @@
     &__heading {
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__label {
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__input {
@@ -80,6 +92,10 @@
         text-decoration: none;
         width: 100%;
         @include m-h3;
+
+        @include tablet{
+            @include dt-h3;
+        }
 
         &--cancel {
             @extend .login-details__btn;

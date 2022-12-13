@@ -11,6 +11,7 @@
     justify-content: space-between;
     z-index: 1;
     padding: 0rem 2rem;
+    @include m-h1;
 
     @include tablet {
         @include dt-h1;

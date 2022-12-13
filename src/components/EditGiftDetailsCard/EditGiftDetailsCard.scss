@@ -28,6 +28,10 @@
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
+
+        @include tablet{
+            @include dt-h1;
+        }
     }
 }
 
@@ -44,12 +48,20 @@
     &__header {
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__label {
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__radio-label {
@@ -58,6 +70,10 @@
         margin-bottom: .25rem;
         display: flex;
         flex-direction: row;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__radio {}
@@ -171,6 +187,10 @@
         font-weight: 100;
         color: #C94515;
 
+        @include tablet{
+            @include dt-p3;
+        }
+
         &--rec {
             @extend .edit-gift-details__error--text;
         }
@@ -206,6 +226,10 @@
         text-decoration: none;
         width: 100%;
         @include m-h3;
+
+        @include tablet{
+            @include dt-h3;
+        }
 
         &--cancel {
             @extend .edit-gift-details__btn;

@@ -28,6 +28,10 @@
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
+
+        @include tablet{
+            @include dt-h1;
+        }
     }
 
     &__btn-container {
@@ -60,6 +64,10 @@
         text-decoration: none;
         width: 100%;
         @include m-h3;
+
+        @include tablet{
+            @include dt-h3;
+        }
 
         &--cancel {
             @extend .delete-giftee__btn;
@@ -101,10 +109,18 @@
     &__heading{
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__info{
         margin-top: 1rem;
         @include m-p1;
+
+        @include tablet{
+            @include dt-p1;
+        }
     }
 }

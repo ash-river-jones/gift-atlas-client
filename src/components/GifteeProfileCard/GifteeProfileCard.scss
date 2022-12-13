@@ -18,6 +18,10 @@
 
     &__table-heading {
         @include m-h4;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__info-section {
@@ -27,10 +31,18 @@
     &__name {
         @include m-h3;
         color: $primaryLight;
+
+        @include tablet{
+            @include dt-h3;
+        }
     }
 
     &__info {
         @include m-p2;
+
+        @include tablet{
+            @include dt-p2;
+        }
     }
 
     &__delete {}

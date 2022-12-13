@@ -32,6 +32,10 @@
         @include m-h1;
         margin-left: .75rem;
         color: $primaryDark;
+
+        @include tablet{
+            @include dt-h1;
+        }
     }
 
     &__edit{
@@ -79,10 +83,18 @@
     &__subheader{
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__info{
-        @include m-p2
+        @include m-p2;
+
+        @include tablet{
+            @include dt-p2;
+        }
     }
 
     &__request-btn{
@@ -94,6 +106,10 @@
         border: none;
         background-color: $primaryLight;
         color: $primaryWhite;
+
+        @include tablet{
+            @include dt-h3;
+        }
     }
 }
 

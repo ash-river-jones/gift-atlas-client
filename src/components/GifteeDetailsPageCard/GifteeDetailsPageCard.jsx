@@ -91,7 +91,7 @@ export default function GifteeDetailsPageCard() {
 						<div className='details__section'>
 							<h4 className='details__subheader'>BIRTHDAY</h4>
 							<p className='details__info'>{gifteeData.birthday}</p>
-							<p className='details__info'>{birthday?calcDaysTo(birthday):""}</p>
+							<p className='details__info'>{birthday?calcDaysTo(birthday):""} days away</p>
 						</div>
 					</div>
 					<div className='details__side'>
@@ -101,7 +101,7 @@ export default function GifteeDetailsPageCard() {
 						<div className='details__section'>
 							<h4 className='details__subheader'>NEXT HOLIDAY</h4>
 							<p className='details__info'>{gifteeData.next_holiday}</p>
-							<p className='details__info'>{next_holiday_date?calcDaysTo(next_holiday_date):""}</p>
+							<p className='details__info'>{next_holiday_date?calcDaysTo(next_holiday_date):""} days away</p>
 						</div>
 					</div>
 				</section>

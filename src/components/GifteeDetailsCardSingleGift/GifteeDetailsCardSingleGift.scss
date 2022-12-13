@@ -18,14 +18,26 @@
     &__name {
         @include m-h3;
 
+        @include tablet{
+            @include dt-h3;
+        }
+
     }
 
     &__desc {
         @include m-h4;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__desc-deets {
         @include m-p2;
+
+        @include tablet{
+            @include dt-p2;
+        }
     }
 
     &__sides-wrapper {
@@ -43,10 +55,18 @@
         margin-top: 1rem;
         @include m-h4;
         margin-bottom: .25rem;
+
+        @include tablet{
+            @include dt-h4;
+        }
     }
 
     &__info {
         @include m-p2;
+
+        @include tablet{
+            @include dt-p2;
+        }
 
         &--link {
             @extend .single-gift__info;
