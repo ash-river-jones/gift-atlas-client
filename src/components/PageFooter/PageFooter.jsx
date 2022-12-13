@@ -1,7 +1,7 @@
 import './PageFooter.scss';
-import email from '../../assets/icons/email.png'
+import email from '../../assets/icons/email.svg'
 import linkedin from '../../assets/icons/linkedin.svg'
-import logo from '../../assets/icons/logo_4.png'
+import logo from '../../assets/icons/logo.svg'
 
 export default function PageFooter() {
 	return (

@@ -36,6 +36,7 @@
 
         @include tablet {
             display: flex;
+
         }
     }
 
@@ -43,7 +44,7 @@
         padding-bottom: 1rem;
 
         @include tablet {
-            margin-right: 1rem;
+            margin-inline: 1rem;
             width: 100%;
             padding-bottom: 0;
         }
@@ -86,6 +87,8 @@
         align-items: center;
         @include m-p2;
         font-weight: 700;
+        border: solid 1px #00332c;
+
 
 
         @include tablet {
