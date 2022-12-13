@@ -52,7 +52,7 @@ export default function GifteeDetailsCardSingleGift({ giftee_name, gift_id, gift
 						</div>
 						<div className='single-gift__detail-section'>
 							<h4 className='single-gift__heading'>TRACKING NUMBER</h4>
-							<a href={`https://www.google.com/search?q=${tracking_number}`} className='single-gift__info--link'><p className='single-gift__info'>{tracking_number}</p></a>
+							<a href={`https://www.google.com/search?q=${tracking_number}`} className='single-gift__info--link' target={`_blank`}><p className='single-gift__info'>{tracking_number}</p></a>
 						</div>
 						<div className='single-gift__detail-section'>
 							<div className='single-gift__info-section single-gift__edit'><Link to={`/${giftee_id}/${gift_id}/edit`}><img src={editIcon} alt="Edit Giftee Icon" /></Link></div>
