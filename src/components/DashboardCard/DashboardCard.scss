@@ -94,6 +94,8 @@
         @include tablet {
             @include dt-p2;
             height: 2.375rem;
+            font-weight: 700;
+
         }
     }
 }

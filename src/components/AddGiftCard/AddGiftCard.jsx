@@ -53,6 +53,10 @@ export default function AddGiftCard() {
 	},[token])
 
 	useEffect(() => {
+		console.log(gifteeList)
+	},[gifteeList])
+
+	useEffect(() => {
 		if (itemName === '') {
 			setItemNameError(true)
 		} else {
@@ -253,7 +257,6 @@ export default function AddGiftCard() {
 										<option key={giftee.giftee_id} value={giftee.giftee_id} className='add-gift-details__select-option'>{giftee.name}</option>
 									))}
 								</select>
-								<span className='add-gift-details__select-focus'></span>
 							</div>
 							{gifteeIDError && (
 							<div className='add-giftee-details__error-wrapper'>

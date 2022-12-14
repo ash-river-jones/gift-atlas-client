@@ -66,6 +66,10 @@ export default function EditGiftDetailsCard() {
 	},[gift_id, token])
 
 	useEffect(() => {
+		console.log(gifteeList)
+	},[gifteeList])
+
+	useEffect(() => {
 		setItemName(giftData.item_name)
 		setItemDescription(giftData.item_description)
 		setRetailer(giftData.retailer)

@@ -72,6 +72,27 @@
         }
     }
 
+    &__error-wrapper {
+        margin-top: 0.25rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__error-img {
+        height: .8125rem;
+        width: .8125rem;
+    }
+
+    &__error--text {
+        @include m-p3;
+        font-weight: 100;
+        color: #C94515;
+        @include tablet{
+            @include dt-p3;
+        }
+    }
+
     &__btn-container {
         padding: 1.5rem 0.25rem;
         background-color: #f2f7f5;

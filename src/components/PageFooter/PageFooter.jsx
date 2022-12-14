@@ -2,16 +2,27 @@ import './PageFooter.scss';
 import email from '../../assets/icons/email.svg'
 import linkedin from '../../assets/icons/linkedin.svg'
 import logo from '../../assets/icons/logo.svg'
+import { useNavigate } from 'react-router-dom';
 
 export default function PageFooter() {
+	const navigate = useNavigate()
+
+	const handelLogout = () => {
+		sessionStorage.clear()
+		navigate('/')
+	}
+
 	return (
 		<>
 			<footer className='footer'>
 				<div className='footer__header'>
 					<h2 className="footer__heading">Get in Touch</h2>
 					<div className="footer__social">
-						<a className='footer__social-link' href="mailto:gift.atlas.holiday.gift.tracker@gmail.com"><img className='footer__social-img' src={email} alt="Email" /></a>
-						<a className='footer__social-link' href="https://www.linkedin.com/in/ash-river-jones/"><img className='footer__social-img' src={linkedin} alt="LinkedIn" /></a>
+						<div className="footer__social-wrapper">
+							<a className='footer__social-link' href="mailto:gift.atlas.holiday.gift.tracker@gmail.com"><img className='footer__social-img' src={email} alt="Email" /></a>
+							<a className='footer__social-link' href="https://www.linkedin.com/in/ash-river-jones/"><img className='footer__social-img' src={linkedin} alt="LinkedIn" /></a>
+						</div>
+						<div className='footer__logout-wrapper'><button className="footer__logout-btn" onClick={handelLogout}>Logout</button></div>
 					</div>
 				</div>	
 				<div className="footer__body">

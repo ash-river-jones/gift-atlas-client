@@ -27,11 +27,41 @@
 
     &__social {}
 
+    &__social-wrapper {}
+
     &__social-link {}
 
     &__social-img {
         height: 3rem;
         width: 3rem;
+
+        @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+    }
+
+    &__logout-wrapper{}
+
+    &__logout-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        width: 100%;
+        background-color: #faae2b;
+        color: #00473e;
+        border: solid 1px #00332c;
+        &:hover {
+            border: solid 1px #00473e;
+        }
+
+        @include m-h3;
+        @include tablet{
+            @include dt-h3;
+        }
     }
 
     &__details {
