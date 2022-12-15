@@ -164,7 +164,9 @@ export default function AddGifteeCard() {
 						<Link to={`/dashboard`}><img className='add-giftee__back-arrow' src={backArrow} alt="Back arrow to dashboard" /></Link>
 						<h1 className='add-giftee__heading'>Add Giftee</h1>
 					</div>
-					<form onSubmit={handleAddGiftee}>
+				</section>
+				<form onSubmit={handleAddGiftee}>
+					<div className="add-giftee-details">
 						<div className='add-giftee-details__wrapper'>
 							<h2 className='add-giftee-details__heading'>Giftee Details</h2>
 							<label htmlFor='name' className='add-giftee-details__label'>Name</label>
@@ -234,12 +236,12 @@ export default function AddGifteeCard() {
 							</div>
 							)}
 						</div>
-						<div className='add-giftee-details__btn-container'>
-							<div className='add-giftee-details__btn-wrapper--cancel'><button type="button" className='add-giftee-details__btn--cancel' onClick={()=>{navigate('/dashboard')}}>Cancel</button></div>
-							<div className='add-giftee-details__btn-wrapper--submit'><button type="submit" className='add-giftee-details__btn--submit'>Save</button></div>
-						</div>
-					</form>
-				</section>
+					</div>
+					<div className='add-giftee-details__btn-container'>
+						<div className='add-giftee-details__btn-wrapper--cancel'><button type="button" className='add-giftee-details__btn--cancel' onClick={()=>{navigate('/dashboard')}}>Cancel</button></div>
+						<div className='add-giftee-details__btn-wrapper--submit'><button type="submit" className='add-giftee-details__btn--submit'>Save</button></div>
+					</div>
+				</form>
 			</main>
 		</>
 	);

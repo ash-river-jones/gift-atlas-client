@@ -115,7 +115,7 @@ export default function EditGiftDetailsCard() {
 	},[productLink])
 
 	useEffect(() => {
-		if (price === '') {
+		if (price === '' || isNaN(price)) {
 			setPriceError(true)
 		} else {
 			setPriceError(null)
@@ -204,7 +204,9 @@ export default function EditGiftDetailsCard() {
 						<Link to={`/${giftee_id}`}><img className='edit-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
 						<h1 className='edit-gift__heading'>Edit Gift</h1>
 					</div>
-					<form onSubmit={handelEditGift}>
+				</section>
+				<form onSubmit={handelEditGift}>
+					<div className="edit-gift-details">
 						<div className="edit-gift-details__wrapper">
 							<h2 className="edit-gift-details__heading">Gift Details</h2>
 							<label htmlFor="item_name" className='edit-gift-details__label'>Item Name</label>
@@ -236,7 +238,7 @@ export default function EditGiftDetailsCard() {
 							{priceError && (
 							<div className='edit-gift-details__error-wrapper'>
 								<img className='edit-gift-details__error-img' src={error} alt='' />
-								<p className='edit-gift-details__error--text'>This field is required</p>
+								<p className='edit-gift-details__error--text'>This field is required to be a number</p>
 							</div>
 							)}
 						</div>
@@ -292,12 +294,12 @@ export default function EditGiftDetailsCard() {
 							</div>
 							)}
 						</div>
-						<div className='edit-gift-details__btn-container'>
-							<div className='edit-gift-details__btn-wrapper--cancel'><button type="button" className='edit-gift-details__btn--cancel' onClick={()=>{navigate(`/${giftee_id}`)}}>Cancel</button></div>
-							<div className='edit-gift-details__btn-wrapper--submit'><button type="submit" className='edit-gift-details__btn--submit'>Save</button></div>
-						</div>
-					</form>
-				</section>
+					</div>
+					<div className='edit-gift-details__btn-container'>
+						<div className='edit-gift-details__btn-wrapper--cancel'><button type="button" className='edit-gift-details__btn--cancel' onClick={()=>{navigate(`/${giftee_id}`)}}>Cancel</button></div>
+						<div className='edit-gift-details__btn-wrapper--submit'><button type="submit" className='edit-gift-details__btn--submit'>Save</button></div>
+					</div>
+				</form>
 			</main>
 		</>
 	);

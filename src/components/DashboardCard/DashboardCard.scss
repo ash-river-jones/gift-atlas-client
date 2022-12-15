@@ -68,10 +68,6 @@
 
     &__new-giftee-wrapper {
         width: 100%;
-
-        @include desktop {
-            width: 65%;
-        }
     }
 
     &__new-giftee-btn {

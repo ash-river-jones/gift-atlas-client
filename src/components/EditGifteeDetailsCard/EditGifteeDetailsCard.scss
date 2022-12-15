@@ -36,13 +36,22 @@
 }
 
 .edit-giftee-details {
+    @include tablet{
+        display: flex;
+    }
+
     &__wrapper {
-        padding: 0rem 1.5rem 1rem 1.5rem;
-        margin-top: 1rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         border-bottom: 1px solid #d7e2ea;
+
+        @include tablet{
+            padding: 1.5rem;
+            width: 50%;
+            border-inline: 0.5px solid #d7e2ea;
+        }
     }
 
     &__heading {

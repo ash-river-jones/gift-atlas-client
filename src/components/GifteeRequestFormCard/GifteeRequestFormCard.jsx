@@ -93,7 +93,7 @@ export default function GifteeRequestFormCard() {
 					tracking_number: ''
 				})
 				.then(() => {
-					// navigate(`/`)
+					navigate(`/`)
 				})
 				.catch((err) => {
 					console.log(err)
@@ -104,53 +104,53 @@ export default function GifteeRequestFormCard() {
 
 	return (
 		<>
-			<main className="add-gift">
-				<section className='add-gift__header'>
-					<div className='add-gift__header-wrapper'>
-						<Link to={`/`}><img className='add-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
-						<h1 className='add-gift__heading'>Submit Gift Request</h1>
+			<main className="giftee-add-gift">
+				<section className='giftee-add-gift__header'>
+					<div className='giftee-add-gift__header-wrapper'>
+						<Link to={`/`}><img className='giftee-add-gift__back-arrow' src={backArrow} alt="Back arrow to giftee profile" /></Link>
+						<h1 className='giftee-add-gift__heading'>Submit Gift Request</h1>
 					</div>
 					<form onSubmit={handelAddGift}>
-						<div className="add-gift-details__wrapper">
-							<h2 className="add-gift-details__heading">Gift Details</h2>
-							<label htmlFor="item_name" className='add-gift-details__label'>Item Name</label>
-							<input type="text" name="item_name" id="item_name" className='add-gift-details__input' value={itemName} placeholder='Item Name' onChange={(e)=>{setItemName(e.target.value)}}/>
+						<div className="giftee-add-gift-details__wrapper">
+							<h2 className="giftee-add-gift-details__heading">Gift Details</h2>
+							<label htmlFor="item_name" className='giftee-add-gift-details__label'>Item Name</label>
+							<input type="text" name="item_name" id="item_name" className='giftee-add-gift-details__input' value={itemName} placeholder='Item Name' onChange={(e)=>{setItemName(e.target.value)}}/>
 							{itemNameError && (
-							<div className='add-giftee-details__error-wrapper'>
-								<img className='add-giftee-details__error-img' src={error} alt='' />
-								<p className='add-giftee-details__error--text'>This field is required</p>
+							<div className='giftee-add-gift-details__error-wrapper'>
+								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+								<p className='giftee-add-gift-details__error--text'>This field is required</p>
 							</div>
 							)}
-							<label htmlFor="item_description" className='add-gift-details__label'>Item Description</label>
-							<textarea name="item_description" id="item_description" cols="30" rows="10" className='add-gift-details__text-area' value={itemDescription} placeholder='Please enter a breif item description...' onChange={(e) => {setItemDescription(e.target.value)}}></textarea>
+							<label htmlFor="item_description" className='giftee-add-gift-details__label'>Item Description</label>
+							<textarea name="item_description" id="item_description" cols="30" rows="10" className='giftee-add-gift-details__text-area' value={itemDescription} placeholder='Please enter a breif item description...' onChange={(e) => {setItemDescription(e.target.value)}}></textarea>
 							{itemDescriptionError && (
-							<div className='add-giftee-details__error-wrapper'>
-								<img className='add-giftee-details__error-img' src={error} alt='' />
-								<p className='add-giftee-details__error--text'>This field is required</p>
+							<div className='giftee-add-gift-details__error-wrapper'>
+								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+								<p className='giftee-add-gift-details__error--text'>This field is required</p>
 							</div>
 							)}
-							<label htmlFor="retailer" className='add-gift-details__label'>Retailer</label>
-							<input type="text" name="retailer" id="retailer" className='add-gift-details__input' value={retailer} placeholder='Retailer' onChange={(e) => {setRetailer(e.target.value)}}/>
+							<label htmlFor="retailer" className='giftee-add-gift-details__label'>Retailer</label>
+							<input type="text" name="retailer" id="retailer" className='giftee-add-gift-details__input' value={retailer} placeholder='Retailer' onChange={(e) => {setRetailer(e.target.value)}}/>
 							{retailerError && (
-							<div className='add-giftee-details__error-wrapper'>
-								<img className='add-giftee-details__error-img' src={error} alt='' />
-								<p className='add-giftee-details__error--text'>This field is required</p>
+							<div className='giftee-add-gift-details__error-wrapper'>
+								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+								<p className='giftee-add-gift-details__error--text'>This field is required</p>
 							</div>
 							)}
-							<label htmlFor="price" className='add-gift-details__label'>Price</label>
-							<input type="text" name="price" id="price" className='add-gift-details__input' value={price} placeholder='$' onChange={(e) => {setPrice(e.target.value)}}/>
+							<label htmlFor="price" className='giftee-add-gift-details__label'>Price</label>
+							<input type="text" name="price" id="price" className='giftee-add-gift-details__input' value={price} placeholder='$' onChange={(e) => {setPrice(e.target.value)}}/>
 							{priceError && (
-							<div className='add-giftee-details__error-wrapper'>
-								<img className='add-giftee-details__error-img' src={error} alt='' />
-								<p className='add-giftee-details__error--text'>This field is required</p>
+							<div className='giftee-add-gift-details__error-wrapper'>
+								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+								<p className='giftee-add-gift-details__error--text'>This field is required</p>
 							</div>
 							)}
-							<label htmlFor="product_link" className='add-gift-details__label'>Product Link</label>
-							<input type="text" name="product_link" id="product_link" className='add-gift-details__input' value={productLink} placeholder='Product Link' onChange={(e) => {setProductLink(e.target.value)}}/>
+							<label htmlFor="product_link" className='giftee-add-gift-details__label'>Product Link</label>
+							<input type="text" name="product_link" id="product_link" className='giftee-add-gift-details__input' value={productLink} placeholder='Product Link' onChange={(e) => {setProductLink(e.target.value)}}/>
 						</div>
-						<div className='add-gift-details__btn-container'>
-							<div className='add-gift-details__btn-wrapper--cancel'><button type="button" className='add-gift-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
-							<div className='add-gift-details__btn-wrapper--submit'><button type="submit" className='add-gift-details__btn--submit'>Save</button></div>
+						<div className='giftee-add-gift-details__btn-container'>
+							<div className='giftee-add-gift-details__btn-wrapper--cancel'><button type="button" className='giftee-add-gift-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
+							<div className='giftee-add-gift-details__btn-wrapper--submit'><button type="submit" className='giftee-add-gift-details__btn--submit'>Save</button></div>
 						</div>
 					</form>
 				</section>

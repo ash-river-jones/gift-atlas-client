@@ -15,11 +15,11 @@ export default function RequestGiftFormCard() {
 	const gifteeID = params_obj.giftee_id
 
 	const [gifteeData, setGifteeData] = useState({})
-	const [userData, setUserData] = useState()
+	const [userData, setUserData] = useState({})
 	const [budgetDefined, setBudgetDefined] = useState("false")
 	const [gifteeName, setGifteeName] = useState('')
 	const [userName, setUserName] = useState('')
-	const [userID, setUserID] = useState()
+	const [userID, setUserID] = useState('')
 	const [giftBudget, setGiftBudget] = useState('')
 	const [userEmail, setUserEmail] = useState('')
 	const [gifteeEmail, setGifteeEmail] = useState('')
@@ -46,6 +46,7 @@ export default function RequestGiftFormCard() {
 	},[gifteeData, token])
 
 	useEffect(() => {
+		if (userID) {
 		axios
 			.get(`${API_URL}/users/${userID}`,{
 				headers: {
@@ -55,7 +56,7 @@ export default function RequestGiftFormCard() {
 			.then((response) => {
 				setUserData(response.data[0])
 			})
-
+		}
 	},[userID, token])
 
 	useEffect(() => {
