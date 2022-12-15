@@ -8,7 +8,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1rem 1rem 0rem 1rem;
+        padding: 1.5rem 1.5rem 0rem 1.5rem;
         border-bottom: 1px solid #d7e2ea;
     }
 
@@ -50,13 +50,32 @@
     &__sides-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include tablet{
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__side {
-        width: 50%
+        width: 50%;
+
+        @include tablet{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
-    &__details-section {}
+    &__detail-section {
+        @include tablet{
+            width: 25%;
+        }
+
+        &--icon{
+            width: fit-content;
+        }
+    }
 
     &__heading {
         margin-top: 1rem;
@@ -88,6 +107,9 @@
 
     &__delete {
         margin-block: 1rem;
+        @include tablet{
+            width: fit-content;
+        }
     }
 
     &__edit {

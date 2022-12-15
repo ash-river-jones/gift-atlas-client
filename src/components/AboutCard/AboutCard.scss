@@ -136,8 +136,16 @@
     &__img {
         flex-grow: 1;
         margin-inline: 2rem;
+        max-width: 80%;
+
+        
+        @include tablet{
+            max-width: 70%;
+        }
     }
 }
+
+    // hiw === how it works
 
 .hiw {
     display: flex;
@@ -152,11 +160,18 @@
     }
 
     &__heading {
-        @include m-h2;
+        @include m-h1;
         color: #00473e;
         
         @include tablet{
-            @include dt-h2;
+            @include dt-h1;
+        }
+    }
+
+    &__side{
+        @include tablet{
+            display: flex;
+            
         }
     }
 
@@ -166,14 +181,24 @@
         justify-content: center;
         border-bottom: 1px solid #d7e2ea;
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+        @include tablet{
+            width: 50%;
+            border-left: 0.5px solid #d7e2ea;
+            border-right: 0.5px solid #d7e2ea;
+        }
     }
 
     &__img {
         align-self: center;
         margin-bottom: 1rem;
-        max-width: calc(100vw - 5rem);
+        max-width: calc(100% - 3rem);
         border-radius: .5rem;
         box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+        
+        @include tablet{
+            max-height: 11.25rem;
+        }
     }
 
     &__subheader {

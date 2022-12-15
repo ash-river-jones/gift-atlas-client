@@ -11,10 +11,10 @@
         flex-direction: column;
     }
 
-
     &__side {
         margin-left: 1.5rem;
         width: 50%;
+
         @include tablet{
             width: calc(100vw - 5rem);
             display: flex;
@@ -38,7 +38,6 @@
     &__table-heading {
         @include m-h4;
         color: #00473e;
-
 
         @include tablet{
             @include dt-h4;
@@ -82,5 +81,4 @@
     }
 
     &__order-status {}
-
 }
