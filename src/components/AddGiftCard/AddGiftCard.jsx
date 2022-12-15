@@ -211,7 +211,7 @@ export default function AddGiftCard() {
 								{priceError && (
 								<div className='add-giftee-details__error-wrapper'>
 									<img className='add-giftee-details__error-img' src={error} alt='' />
-									<p className='add-giftee-details__error--text'>This field is required</p>
+									<p className='add-giftee-details__error--text'>This field is required to be a number</p>
 								</div>
 								)}
 							</div>

@@ -60,7 +60,7 @@ export default function GifteeRequestFormCard() {
 	},[productLink])
 
 	useEffect(() => {
-		if (price === '') {
+		if (price === '' || isNaN(price)) {
 			setPriceError(true)
 		} else {
 			setPriceError(null)
@@ -121,32 +121,38 @@ export default function GifteeRequestFormCard() {
 								<p className='giftee-add-gift-details__error--text'>This field is required</p>
 							</div>
 							)}
-							<label htmlFor="item_description" className='giftee-add-gift-details__label'>Item Description</label>
-							<textarea name="item_description" id="item_description" cols="30" rows="10" className='giftee-add-gift-details__text-area' value={itemDescription} placeholder='Please enter a breif item description...' onChange={(e) => {setItemDescription(e.target.value)}}></textarea>
-							{itemDescriptionError && (
-							<div className='giftee-add-gift-details__error-wrapper'>
-								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
-								<p className='giftee-add-gift-details__error--text'>This field is required</p>
+							<div className="giftee-add-gift-details__bottom-wrapper">
+								<div className="giftee-add-gift-details__bottom-side">
+									<label htmlFor="item_description" className='giftee-add-gift-details__label'>Item Description</label>
+									<textarea name="item_description" id="item_description" cols="30" rows="10" className='giftee-add-gift-details__text-area' value={itemDescription} placeholder='Please enter a breif item description...' onChange={(e) => {setItemDescription(e.target.value)}}></textarea>
+									{itemDescriptionError && (
+									<div className='giftee-add-gift-details__error-wrapper'>
+										<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+										<p className='giftee-add-gift-details__error--text'>This field is required</p>
+									</div>
+									)}
+								</div>
+								<div className="giftee-add-gift-details__bottom-side">
+									<label htmlFor="retailer" className='giftee-add-gift-details__label'>Retailer</label>
+									<input type="text" name="retailer" id="retailer" className='giftee-add-gift-details__input' value={retailer} placeholder='Retailer' onChange={(e) => {setRetailer(e.target.value)}}/>
+									{retailerError && (
+									<div className='giftee-add-gift-details__error-wrapper'>
+										<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+										<p className='giftee-add-gift-details__error--text'>This field is required</p>
+									</div>
+									)}
+									<label htmlFor="price" className='giftee-add-gift-details__label'>Price</label>
+									<input type="text" name="price" id="price" className='giftee-add-gift-details__input' value={price} placeholder='$' onChange={(e) => {setPrice(e.target.value)}}/>
+									{priceError && (
+									<div className='giftee-add-gift-details__error-wrapper'>
+										<img className='giftee-add-gift-details__error-img' src={error} alt='' />
+										<p className='giftee-add-gift-details__error--text'>This field is required to be a number</p>
+									</div>
+									)}
+									<label htmlFor="product_link" className='giftee-add-gift-details__label'>Product Link</label>
+									<input type="text" name="product_link" id="product_link" className='giftee-add-gift-details__input' value={productLink} placeholder='Product Link' onChange={(e) => {setProductLink(e.target.value)}}/>
+								</div>
 							</div>
-							)}
-							<label htmlFor="retailer" className='giftee-add-gift-details__label'>Retailer</label>
-							<input type="text" name="retailer" id="retailer" className='giftee-add-gift-details__input' value={retailer} placeholder='Retailer' onChange={(e) => {setRetailer(e.target.value)}}/>
-							{retailerError && (
-							<div className='giftee-add-gift-details__error-wrapper'>
-								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
-								<p className='giftee-add-gift-details__error--text'>This field is required</p>
-							</div>
-							)}
-							<label htmlFor="price" className='giftee-add-gift-details__label'>Price</label>
-							<input type="text" name="price" id="price" className='giftee-add-gift-details__input' value={price} placeholder='$' onChange={(e) => {setPrice(e.target.value)}}/>
-							{priceError && (
-							<div className='giftee-add-gift-details__error-wrapper'>
-								<img className='giftee-add-gift-details__error-img' src={error} alt='' />
-								<p className='giftee-add-gift-details__error--text'>This field is required</p>
-							</div>
-							)}
-							<label htmlFor="product_link" className='giftee-add-gift-details__label'>Product Link</label>
-							<input type="text" name="product_link" id="product_link" className='giftee-add-gift-details__input' value={productLink} placeholder='Product Link' onChange={(e) => {setProductLink(e.target.value)}}/>
 						</div>
 						<div className='giftee-add-gift-details__btn-container'>
 							<div className='giftee-add-gift-details__btn-wrapper--cancel'><button type="button" className='giftee-add-gift-details__btn--cancel' onClick={()=>{navigate(`/`)}}>Cancel</button></div>
