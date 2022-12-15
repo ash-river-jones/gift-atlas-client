@@ -70,20 +70,32 @@ export default function GiftDetailsCard() {
 						</div>
 						<div className="gift-details__bottom">
 							<div className='gift-details__side'>
-								<h4 className='gift-details__label'>RETAILER</h4>
-								<p className="gift-details__info">{giftData.retailer}</p>
-								<h4 className='gift-details__label'>STATUS</h4>
-								<p className="gift-details__info">{giftData.gift_status}</p>
-								<h4 className='gift-details__label'>GIFTEE</h4>
-								<p className="gift-details__info">{gifteeData.name}</p>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>RETAILER</h4>
+									<p className="gift-details__info">{giftData.retailer}</p>
+								</div>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>STATUS</h4>
+									<p className="gift-details__info">{giftData.gift_status}</p>
+								</div>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>GIFTEE</h4>
+									<p className="gift-details__info">{gifteeData.name}</p>
+								</div>
 							</div>
 							<div className='gift-details__side'>
-								<h4 className='gift-details__label'>PRICE</h4>
-								<p className="gift-details__info">{giftData.price}</p>
-								<h4 className='gift-details__label'>ORDER NUMBER</h4>
-								<p className="gift-details__info">{giftData.order_number}</p>
-								<h4 className='gift-details__label'>TRACKING NUMBER</h4>
-								<p className="gift-details__info">{giftData.tracking_number}</p>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>PRICE</h4>
+									<p className="gift-details__info">{giftData.price}</p>
+								</div>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>ORDER NUMBER</h4>
+									<p className="gift-details__info">{giftData.order_number}</p>
+								</div>
+								<div className="gift-details__section">
+									<h4 className='gift-details__label'>TRACKING NUMBER</h4>
+									<p className="gift-details__info">{giftData.tracking_number}</p>
+								</div>
 							</div>
 						</div>
 						<div>

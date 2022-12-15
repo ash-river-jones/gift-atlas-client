@@ -75,6 +75,12 @@
 
     &__top {}
 
+    &__section{
+        @include tablet{
+            width: 33%;
+        }
+    }
+
     &__label {
         margin-top: 1rem;
         @include m-h4;
@@ -111,9 +117,19 @@
 
     &__bottom {
         display: flex;
+
+        @include tablet{
+            flex-direction: column;
+        }
     }
 
     &__side {
         width: 50%;
+        
+        @include tablet{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 }

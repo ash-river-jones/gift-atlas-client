@@ -103,24 +103,31 @@
     }
 
     &__heading{
-        @include m-h4;
+        @include m-h2;
         margin-bottom: .25rem;
         color: #00473e;
 
 
         @include tablet{
-            @include dt-h4;
+            @include dt-h2;
+            margin-inline: 2.25rem;
+            margin-top: 1.5rem;
+            width: 75%;
+
         }
     }
 
     &__info{
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         @include m-p1;
         color: #475d5b;
-
+        
 
         @include tablet{
             @include dt-p1;
+            margin-inline: 2.25rem;
+            margin-bottom: 1.5rem;
+            width: 75%;
         }
     }
 }
