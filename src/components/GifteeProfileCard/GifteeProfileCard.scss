@@ -7,15 +7,32 @@
     border-bottom: 1px solid #d7e2ea;
     background-color: #fffffe;
 
+    @include tablet{
+        flex-direction: column;
+    }
 
 
     &__side {
         margin-left: 1.5rem;
         width: 50%;
+        @include tablet{
+            width: calc(100vw - 5rem);
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__section {
         margin-block: 1rem;
+        @include tablet{
+            width: 8rem;
+        }
+
+        &--icon{
+            @include tablet{
+                width: fit-content
+            }
+        }
     }
 
     &__table-heading {
@@ -56,6 +73,12 @@
         display: flex;
         justify-content: flex-end;
         margin-right: 1.5rem;
+
+        @include tablet{
+            margin: 0;
+            width: fit-content;
+            justify-content: flex-start;
+        }
     }
 
     &__order-status {}

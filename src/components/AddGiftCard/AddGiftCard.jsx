@@ -53,6 +53,10 @@ export default function AddGiftCard() {
 	},[token])
 
 	useEffect(() => {
+		setGifteeID(giftee_id)
+	},[giftee_id])
+
+	useEffect(() => {
 		if (itemName === '') {
 			setItemNameError(true)
 		} else {
@@ -251,7 +255,7 @@ export default function AddGiftCard() {
 									<select name="giftee" id="giftee" className='add-gift-details__select' onChange={(e) => {setGifteeID(e.target.value)}}>
 										<option value={null} className='add-gift-details__select-option'>Please select giftee</option>
 										{gifteeList.map((giftee) => (
-											<option key={giftee.giftee_id} value={giftee.giftee_id} className='add-gift-details__select-option'>{giftee.name}</option>
+											<option key={giftee.giftee_id} value={giftee.giftee_id} selected={giftee.giftee_id === gifteeID ? true : false} className='add-gift-details__select-option'>{giftee.name}</option>
 										))}
 									</select>
 								</div>
