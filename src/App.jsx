@@ -22,28 +22,22 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<About />} />                                    (// done  //      // need to add info where placeholders are)
-          <Route path='/dashboard' element={<Dashboard />} />                       (// done  //      //)
-          <Route path='/login' element={<Login />} />                               (// done  // done //)
-          <Route path='/signup' element={<SignUp />} />                             (// done  // done //)
-          <Route path='/add' element={<AddGiftee />} />                             (// done  // done // checked validation -- fine tune styling)
-          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />    (// done  //      // major functionality - fine tuning neccesary -- validation)
-          <Route path='/:giftee_id' element={<GifteeDetails />} />                  (// done  // done // major functionality - fine tuning necessary -- styling )
-          <Route path='/:giftee_id/delete' element={<DeleteGiftee />} />            (// done  //      //)
-          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />         (// done  //      // fine tuning neccesary -- validation)
-          <Route path='/:giftee_id/add' element={<AddGift />}/>                     (// done  //      // fine tuning neccesary -- validation)
-          <Route path='/:giftee_id/:gift_id' element={<GiftDetails />}/>            (// done  //      //)
-          <Route path='/:giftee_id/:gift_id/delete' element={<DeleteGift />} />     (// done  //      //)
-          <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />  (// done  //      // fine tuning neccesary -- validation)
-          <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} /> (// done  //      // fine tuning necessary -- validation and confirm that necessary feilds are there)
+          <Route path='/' element={<About />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/add' element={<AddGiftee />} />
+          <Route path='/:giftee_id/requestgift' element={<RequestGiftForm />} />
+          <Route path='/:giftee_id' element={<GifteeDetails />} />
+          <Route path='/:giftee_id/delete' element={<DeleteGiftee />} />
+          <Route path='/:giftee_id/edit' element={<EditGifteeDetails />} />
+          <Route path='/:giftee_id/add' element={<AddGift />} />
+          <Route path='/:giftee_id/:gift_id' element={<GiftDetails />} />
+          <Route path='/:giftee_id/:gift_id/delete' element={<DeleteGift />} />
+          <Route path='/:giftee_id/:gift_id/edit' element={<EditGiftDetails />} />
+          <Route path='/:user_id/:giftee_id/add' element={<GifteeRequestForm />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
-// finish page footer
-
-// use valid email and valid phone number functions 
-
-// add styling to ordered/purchased and not purchased elements for gift status

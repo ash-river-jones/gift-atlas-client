@@ -7,6 +7,10 @@ import emailjs from '@emailjs/browser';
 
 const API_URL = process.env.REACT_APP_SERVER_URL || '';
 const CLIENT_URL = process.env.REACT_APP_CLIENT_URL || '';
+const emailjs_service_id = process.env.REACT_APP_emailjs_service_id || '';
+const emailjs_public_key = process.env.REACT_APP_emailjs_public_key || '';
+const emailjs_template_budget = process.env.REACT_APP_emailjs_template_budget || '';
+const emailjs_template_no_budget = process.env.REACT_APP_emailjs_template_no_budget || '';
 
 export default function RequestGiftFormCard() {
 	const token = sessionStorage.authToken
@@ -92,7 +96,7 @@ export default function RequestGiftFormCard() {
 
 	const sendEmailBudget = (e) => {
 		e.preventDefault();
-		emailjs.send('service_10j4rpa', 'template_budget', emailParamsBudget, 'Uxre8dykVxvLN5T7z')
+		emailjs.send(emailjs_service_id, emailjs_template_budget, emailParamsBudget, emailjs_public_key)
 			.then(function(response) {
 				navigate('/dashboard')
 			}, function(error) {
@@ -101,7 +105,7 @@ export default function RequestGiftFormCard() {
 	};
 	const sendEmailNoBudget = (e) => {
 		e.preventDefault();
-		emailjs.send('service_10j4rpa', 'template_no-budget', emailParamsNoBudget, 'Uxre8dykVxvLN5T7z')
+		emailjs.send(emailjs_service_id, emailjs_template_no_budget, emailParamsNoBudget, emailjs_public_key)
 			.then(function(response) {
 				navigate('/dashboard')
 			}, function(error) {

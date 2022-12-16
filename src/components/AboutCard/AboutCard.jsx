@@ -37,24 +37,24 @@ export default function AboutCard() {
 					</div>
 					<div className="hiw__side">
 						<div className="hiw__section">
-							<img src={holidayStress} alt="Placeholder img" className="hiw__img" />
+							<img src={holidayStress} alt="holiday stress" className="hiw__img" />
 							<h3 className="hiw__subheader">Holiday Stress about what gifts to get?</h3>
 							<p className="hiw__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos voluptatum natus accusamus ex nostrum quia provident ea iste porro neque ducimus magnam, sit, obcaecati officiis molestias veniam nihil magni.</p>
 						</div>
 						<div className="hiw__section">
-							<img src={giftStress} alt="Placeholder img" className="hiw__img" />
+							<img src={giftStress} alt="gift stress" className="hiw__img" />
 							<h3 className="hiw__subheader">Not knowing what color or size to get?</h3>
 							<p className="hiw__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos voluptatum natus accusamus ex nostrum quia provident ea iste porro neque ducimus magnam, sit, obcaecati officiis molestias veniam nihil magni.</p>
 						</div>
 					</div>
 					<div className="hiw__side">
 						<div className="hiw__section">
-							<img src={happyGift} alt="Placeholder img" className="hiw__img" />
+							<img src={happyGift} alt="happy gift" className="hiw__img" />
 							<h3 className="hiw__subheader">Knowing exactly what everyone wants</h3>
 							<p className="hiw__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos voluptatum natus accusamus ex nostrum quia provident ea iste porro neque ducimus magnam, sit, obcaecati officiis molestias veniam nihil magni.</p>
 						</div>
 						<div className="hiw__section">
-							<img src={familyGift} alt="Placeholder img" className="hiw__img" />
+							<img src={familyGift} alt="family gift" className="hiw__img" />
 							<h3 className="hiw__subheader">Staying within your holiday budget</h3>
 							<p className="hiw__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos voluptatum natus accusamus ex nostrum quia provident ea iste porro neque ducimus magnam, sit, obcaecati officiis molestias veniam nihil magni.</p>
 						</div>
