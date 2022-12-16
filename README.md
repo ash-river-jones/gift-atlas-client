@@ -1,6 +1,6 @@
 # Gift Atlas - Making Holiday/Birthday gift shopping easier 🎁 
 
-Is holiday shopping stressful? Not knowing what gifts to get people? That's the best part of  of _Gift Atlas_🎁.  The application  is a dashboard where you can add those important to you, track their birthday and upcoming holiday, and track which gifts you'd like and have them send you gift ideas when you aren't sure!  
+Is holiday shopping stressful? Not knowing what gifts to get people? That's the best part of of Gift Atlas 🎁.  The application is a dashboard where you can add those important to you, track their birthday and upcoming holiday, and track which gifts you'd like and have them send you gift ideas when you aren't sure!  
 
 This app was built using React.js, React Router, JavaScript, HTML, SCSS, Axios and EmailJS
 
