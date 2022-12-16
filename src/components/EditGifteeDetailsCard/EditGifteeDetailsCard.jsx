@@ -42,8 +42,6 @@ export default function EditGifteeDetailsCard() {
 	const [nextHolidayError, setNextHolidayError] = useState(false)
 	const [nextHolidayDateError, setNextHolidayDateError] = useState(false)
 	const [emailError, setEmailError] = useState(false)
-	const [_phoneError, setPhoneError] = useState(false)
-	const [_addressError, setAddressError] = useState(false)
 	const [giftFormOptInError, setGiftFormOptInError] = useState(false)
 
 	useEffect(() => {
@@ -58,10 +56,6 @@ export default function EditGifteeDetailsCard() {
 		setGiftFormOptIn(gifteeData.gift_form_opt_in)
 	}, [gifteeData])
 
-	function validatecontact_phoneNumber(number) {
-		const re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-		return re.test(number);
-	}
 
 	function validatecontact_email(contact_email) {
 		const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]*$/;
@@ -115,22 +109,6 @@ export default function EditGifteeDetailsCard() {
 			setEmailError(null)
 		}
 	},[email])
-
-	useEffect(() => {
-		if (validatecontact_phoneNumber(phone) === false || phone === '') {
-			setPhoneError(true)
-		} else {
-			setPhoneError(null)
-		}
-	},[phone])
-
-	useEffect(() => {
-		if (address === '') {
-			setAddressError(true)
-		} else {
-			setAddressError(null)
-		}
-	},[address])
 
 	useEffect(() => {
 		if (giftFormOptIn === '') {
