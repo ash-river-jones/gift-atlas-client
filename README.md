@@ -1,86 +1,102 @@
-# Welcome to Gift Atlas 🎁 
+# Gift Atlas - Making Holiday/Birthday gift shopping easier 🎁 
 
-GitHub Repo for Server: https://github.com/ash-river-jones/gift-atlas-server
+Is holiday shopping stressful? Not knowing what gifts to get people? That's the best part of  of _Gift Atlas_🎁.  The application  is a dashboard where you can add those important to you, track their birthday and upcoming holiday, and track which gifts you'd like and have them send you gift ideas when you aren't sure!  
 
-## Setting up Client .env
+This app was built using React.js, React Router, JavaScript, HTML, SCSS, Axios and EmailJS
 
-Reference the sample.env file in the main directory - include the below lines:
+## Related
 
-REACT_APP_SERVER_URL='server url'
-REACT_APP_CLIENT_URL='client url'
-REACT_APP_emailjs_service_id='servide ID from EmailJS'
-REACT_APP_emailjs_public_key='public key from EmailJS'
+Here is the back end API for this project: 
+
+[Gift Atlas - Node.js Back End](https://github.com/ash-river-jones/gift-atlas-server)
+
+## Run Locally 
+
+1. Once you have cloned this repository make sure to run `npm i` to install any dependancies you might be missing. 
+2. Make sure you download [Gift Atlas - server](https://github.com/ash-river-jones/gift-atlas-server) and do the same. 
+3. You will need an Service ID, Template ID and Public Key from EmailJS, which you can create [on their website](https://www.emailjs.com/).
+
+## EmailJS Templates:
+There are two email templates needed to be created to have the application functin properly:
+Copy and paste the below into the "Budget" template that you have created:
+
+Subject: 🎁 Someone using Gift Atlas has requested a gift from you! 
+
+To Email: {{giftee_email}}
+
+Reply To: {{user_email}}
+
+From Name: Gift Atlas - Holiday Gift Tracker
+
+Content: Hello {{giftee_name}},
+
+{{user_name}}, who uses Gift Atlas for Holiday Gift Tracking, has requested a gift idea from you! 
+
+Please go to the following link to submit a gift that you would like for the upcoming holiday! 
+
+Message from {{user_name}}:
+
+{{message}}
+
+Click Here: {{client_link}}/{{user_id}}/{{giftee_id}}/add
+
+{{user_name}} has set a budget suggestion for this gift of approximately ${{gift_budget}}.
+
+Please be sure to include a link, colour preference or size (if applicable).
+
+Learn more about Gift Atlas here: {{client_link}}
+
+Best wishes,
+Gift Atals team
 
 
-## Installing Dependencies
+Copy and paste the below into the "No Budget" template that you have created:
 
-### `npm i`
+Subject: 🎁 Someone using Gift Atlas has requested a gift from you! 
 
+To Email: {{giftee_email}}
 
-## Set up EmailJS
+Reply To: {{user_email}}
 
-Go to the EmailJS website and sign up: https://www.emailjs.com/
+From Name: Gift Atlas - Holiday Gift Tracker
 
+Content: Hello {{giftee_name}},
 
+{{user_name}}, who uses Gift Atlas for Holiday Gift Tracking, has requested a gift idea from you! 
 
+Please go to the following link to submit a gift that you would like for the upcoming holiday! 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Message from {{user_name}}:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+{{message}}
 
-### `npm test`
+Click Here: {{client_link}}/{{user_id}}/{{giftee_id}}/add
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Please be sure to include a link, colour preference or size (if applicable).
 
-### `npm run build`
+Learn more about Gift Atlas here: {{client_link}}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Best wishes,
+Gift Atals team
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project, you will need to add the following environment variables to your .env file.  
 
-### `npm run eject`
+You will need to provide EmailJS Service ID, Public Key, Budget Template & No Budget Template.
+#  EmailJS
+`REACT_APP_emailjs_service_id`=`{YOUR EMAILJS SERVICE ID HERE}` <br />
+`REACT_APP_emailjs_public_key`=`{YOUR EMAILJS PUBLIC KEY HERE}` <br />
+`REACT_APP_emailjs_template_budget`=`{YOUR EMAILJS BUDGET TEMPLATE ID HERE}` <br />
+`REACT_APP_TMDB_GENRE_DETAILS`=`{YOUR EMAILJS NO BUDGET TEMPLATE ID HERE}`
+# api
+`REACT_APP_SERVER_URL`=`{YOUR SERVER DEPLOYMENT HERE}` <br />
+`REACT_APP_CLIENT_URL`=`{YOUR CLIENT DEPLOYMENT HERE}`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![App Screenshot](https://github.com/ash-river-jones/gift-atlas-client/blob/e7f7971953373c209f017a5e941411ae8aa3baf2/src/data/screenshot.png?raw=true)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Author
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@ash-river-jones](https://github.com/ash-river-jones)
