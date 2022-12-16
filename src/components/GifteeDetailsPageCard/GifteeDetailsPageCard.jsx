@@ -17,7 +17,6 @@ export default function GifteeDetailsPageCard() {
 	const [gifteeData, setGifteeData] = useState([])
 	const [gifteeGifts, setGifteeGifts] = useState([])
 	const [hasMultipleGifts, setHasMultipleGifts] = useState(false)
-	const [_gifteeEmailValid, setGifteeEmailValid] = useState(false)
 	const [hasZeroGifts, setHasZeroGifts] = useState(true)
 	const [next_holiday_date, setNext_holiday_date] = useState('')
 	const [birthday, setBirthday] = useState('')
@@ -64,15 +63,7 @@ export default function GifteeDetailsPageCard() {
 	useEffect(() => {
 		setNext_holiday_date(gifteeData.next_holiday_date)
 		setBirthday(gifteeData.birthday)
-	},[gifteeData])
-
-	useEffect(() => {
-		if (gifteeData.email) {
-			setGifteeEmailValid(true)
-		} else {
-			setGifteeEmailValid(false)
-		}	
-	},[gifteeData.email])
+	},[gifteeData]) 
 
 	return (
 		<>

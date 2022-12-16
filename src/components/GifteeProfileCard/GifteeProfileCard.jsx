@@ -55,7 +55,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT STATUS</h4>
                         <div className='profile__info-section'><p className='profile__info profile__order-status'>Ordered/Purchased</p></div>
-                    </li> : <></>
+                    </li> : <div className='profile__section'></div>
                     }
                     <li className='profile__section profile__section--icon'>   
                         <div className='profile__info-section profile__delete'><Link to={`/${giftee_id}/delete`}><img src={deleteIcon} alt="Delete Giftee Icon" /></Link></div>
@@ -78,7 +78,7 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT PURCHASED</h4>
                         <div className='profile__info-section'><p className='profile__info'>{purchasedGifts.item_name}</p></div>
-                    </li>: <></>
+                    </li>: <div className='profile__section'></div>
                     }
                     <li className='profile__section  profile__section--icon'>   
                         <div className='profile__info-section profile__edit'><Link to={`/${giftee_id}/edit`}><img src={editIcon} alt="Edit Giftee Icon" /></Link></div>

@@ -24,7 +24,6 @@ export default function GifteeRequestFormCard() {
 	const [itemNameError, setItemNameError] = useState(null)
 	const [itemDescriptionError, setItemDescriptionError] = useState(null)
 	const [retailerError, setRetailerError] = useState(null)
-	const [_productLinkError, setProductLinkError] = useState(null)
 	const [priceError, setPriceError] = useState(null)
 
 	useEffect(() => {
@@ -50,14 +49,6 @@ export default function GifteeRequestFormCard() {
 			setRetailerError(null)
 		}
 	},[retailer])
-
-	useEffect(() => {
-		if (productLink === '') {
-			setProductLinkError(true)
-		} else {
-			setProductLinkError(null)
-		}
-	},[productLink])
 
 	useEffect(() => {
 		if (price === '' || isNaN(price)) {
