@@ -1,0 +1,121 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.single-gift {
+
+    &__wrapper {
+        background-color: #fffffe;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem 1.5rem 0rem 1.5rem;
+        border-bottom: 1px solid #d7e2ea;
+    }
+
+    &__details-top {
+        margin-bottom: 1rem;
+    }
+
+    &__name {
+        @include m-h3;
+        color: #00473e;
+
+
+        @include tablet{
+            @include dt-h3;
+        }
+
+    }
+
+    &__desc {
+        @include m-h4;
+        color: #00473e;
+
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__desc-deets {
+        @include m-p2;
+        color: #475d5b;
+
+
+        @include tablet{
+            @include dt-p2;
+        }
+    }
+
+    &__sides-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet{
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__side {
+        width: 50%;
+
+        @include tablet{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__detail-section {
+        @include tablet{
+            width: 25%;
+        }
+
+        &--icon{
+            width: fit-content;
+        }
+    }
+
+    &__heading {
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__info {
+        @include m-p2;
+        color: #475d5b;
+
+
+        @include tablet{
+            @include dt-p2;
+        }
+
+        &--link {
+            @extend .single-gift__info;
+        }
+    }
+
+    &__info-section {}
+
+    &__delete {
+        margin-block: 1rem;
+        @include tablet{
+            width: fit-content;
+        }
+    }
+
+    &__edit {
+        margin-block: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}

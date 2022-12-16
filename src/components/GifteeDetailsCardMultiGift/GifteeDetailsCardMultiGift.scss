@@ -1,0 +1,86 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.multi-gift {
+
+    &__wrapper {
+        background-color: #fffffe;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem 0rem 1rem;
+        border-bottom: 1px solid #d7e2ea;
+
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+
+    &__side {
+        width: 50%;
+
+        @include tablet{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__detail-section {
+        margin-bottom: 1rem;
+        
+        @include tablet{
+            width: 33%
+        }
+
+        &--icon{
+            width: fit-content;
+        }
+    }
+
+    &__heading {
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+        
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__info {
+        @include m-p2;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-p2;
+        }
+    }
+
+    &__info-link {
+        color: #d8779a;
+    }
+
+    &__edit {
+
+    }
+
+    &__info-section {
+        
+        &--delete{
+            @include tablet{
+                width: fit-content;
+            }
+        }
+
+        &--edit{
+            display: flex;
+            justify-content: flex-end;
+            @include tablet {
+                justify-content: flex-start;
+                width: fit-content;
+            }
+        }
+    }
+
+    &__gift-status {}
+}

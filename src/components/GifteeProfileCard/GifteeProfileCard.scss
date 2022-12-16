@@ -1,0 +1,84 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7e2ea;
+    background-color: #fffffe;
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    &__side {
+        margin-left: 1.5rem;
+        width: 50%;
+
+        @include tablet{
+            width: calc(100vw - 5rem);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__section {
+        margin-block: 1rem;
+        @include tablet{
+            width: 10.3125rem;
+        }
+
+        &--icon{
+            @include tablet{
+                width: fit-content
+            }
+        }
+    }
+
+    &__table-heading {
+        @include m-h4;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__info-section {
+        display: flex;
+    }
+
+    &__name {
+        @include m-h3;
+        color: #d8779a;
+
+        @include tablet{
+            @include dt-h3;
+        }
+    }
+
+    &__info {
+        @include m-p2;
+        color: #475d5b;
+
+        @include tablet{
+            @include dt-p2;
+        }
+    }
+
+    &__delete {}
+
+    &__edit {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1.5rem;
+
+        @include tablet{
+            margin: 0;
+            width: fit-content;
+            justify-content: flex-start;
+        }
+    }
+
+    &__order-status {}
+}

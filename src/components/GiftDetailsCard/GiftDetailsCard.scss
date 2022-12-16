@@ -1,0 +1,135 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.gift-details {
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: #fffffe;
+    box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header {}
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #d7e2ea;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    &__back-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--edit {
+            margin-left: 2rem
+        }
+    }
+
+    &__heading {
+        @include m-h1;
+        margin-left: .75rem;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h1;
+        }
+    }
+
+    &__edit-wrapper {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: #faae2b;
+        border: solid 1px #00332c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include tablet{
+            margin-left: 1.25rem;
+        }
+    }
+
+    &__edit-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &__wrapper {
+        padding: 0rem 1.5rem 1rem 1.5rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #d7e2ea;
+    }
+
+    &__top {}
+
+    &__section{
+        @include tablet{
+            width: 33%;
+        }
+    }
+
+    &__label {
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+
+        
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__info {
+        @include m-p2;
+        color: #475d5b;
+        
+        @include tablet{
+            @include dt-p2;
+        }
+
+        &--desc {
+            @extend .gift-details__info;
+
+        }
+
+        &--link {
+            @extend .gift-details__info;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            color: #475d5b;
+            text-decoration: underline;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+
+    &__side {
+        width: 50%;
+        
+        @include tablet{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

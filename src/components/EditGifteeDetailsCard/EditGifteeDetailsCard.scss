@@ -1,0 +1,202 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.edit-giftee {
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: #fffffe;
+    box-shadow: 0px 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header {}
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #d7e2ea;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    &__back-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        @include m-h1;
+        margin-left: .75rem;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h1;
+        }
+    }
+}
+
+.edit-giftee-details {
+    @include tablet{
+        display: flex;
+    }
+
+    &__wrapper {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #d7e2ea;
+
+        @include tablet{
+            padding: 1.5rem;
+            width: 50%;
+            border-inline: 0.5px solid #d7e2ea;
+        }
+    }
+
+    &__heading {
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__label {
+        margin-top: 1rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__input {
+        height: 2.25rem;
+        border: 1px solid #475d5b;
+        border-radius: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    &__radio-wrapper {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__radio-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__radio-label {
+        margin-top: .5rem;
+        @include m-h4;
+        margin-bottom: .25rem;
+        color: #00473e;
+        display: flex;
+        flex-direction: row;
+
+        @include tablet{
+            @include dt-h4;
+        }
+    }
+
+    &__radio {}
+
+    &__error-wrapper {
+        margin-top: 0.25rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        &--rec {
+            @extend .edit-giftee-details__error-wrapper;
+        }
+    }
+
+    &__error-img {
+        height: .8125rem;
+        width: .8125rem;
+
+        &--rec {
+            @extend .edit-giftee-details__error-img;
+        }
+    }
+
+    &__error--text {
+        @include m-p3;
+        font-weight: 100;
+        color: #C94515;
+
+        @include tablet{
+            @include dt-p3;
+        }
+
+        &--rec {
+            @extend .edit-giftee-details__error--text;
+        }
+    }
+
+    &__btn-container {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-inline: 1.5rem;
+        background-color: #f2f7f5;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    &__btn-wrapper {
+        width: 50%;
+
+        &--cancel {
+            @extend .edit-giftee-details__btn-wrapper;
+        }
+
+        &--submit {
+            @extend .edit-giftee-details__btn-wrapper;
+        }
+    }
+
+    &__btn {
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        width: 100%;
+        @include m-h3;
+
+        @include tablet{
+            @include dt-h3;
+        }
+
+        &--cancel {
+            @extend .edit-giftee-details__btn;
+            background-color:  #ffa8ba;
+            border: solid 1px #00332c;
+            color: #00473e;
+
+            &:hover {
+                border: solid #00473e 1px;
+            }
+        }
+
+        &--submit {
+            @extend .edit-giftee-details__btn;
+            background-color: #faae2b;
+            color: #00473e;
+            border: solid 1px #00332c;
+
+            &:hover {
+                border: solid 1px #00473e;
+            }
+        }
+    }
+}

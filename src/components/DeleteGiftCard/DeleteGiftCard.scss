@@ -1,0 +1,133 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.delete-gift {
+    margin: -4rem 1rem 0.3125rem 1rem;
+    background-color: #fffffe;
+    box-shadow: 0rem 0.125rem 0.3125rem rgb(19 24 44 / 10%);
+    top: 0;
+    border-radius: 3px;
+
+    &__header {}
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #d7e2ea;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    &__back-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        @include m-h1;
+        margin-left: .75rem;
+        color: #00473e;
+
+        @include tablet{
+            @include dt-h1;
+        }
+    }
+
+    &__btn-container {
+        padding: 1.5rem;
+        background-color: #f2f7f5;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    &__btn-wrapper {
+        width: 50%;
+
+        &--cancel {
+            @extend .delete-gift__btn-wrapper;
+        }
+
+        &--submit {
+            @extend .delete-gift__btn-wrapper;
+        }
+    }
+
+    &__btn {
+        height: 2.25rem;
+        padding: 0 1rem;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        width: 100%;
+        @include m-h3;
+
+        @include tablet{
+            @include dt-h3;
+        }
+
+        &--cancel {
+            @extend .delete-gift__btn;
+            background-color:  #ffa8ba;
+            border: solid 1px #00332c;
+            color: #00473e;
+
+            &:hover {
+                border: solid #00473e 1px;
+            }
+        }
+
+        &--submit {
+            @extend .delete-gift__btn;
+            background-color: #faae2b;
+            color: #00473e;
+            border: solid 1px #00332c;
+
+            &:hover {
+                border: solid 1px #00473e;
+            }
+        }
+    }
+}
+
+.delete-gift-details{
+
+    &__wrapper{
+        padding: 0rem 1.5rem 1rem 1.5rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #d7e2ea;
+    }
+
+    &__heading{
+        @include m-h2;
+        margin-bottom: .25rem;
+        color: #00473e;
+
+
+        @include tablet{
+            @include dt-h2;
+            margin-inline: 2.25rem;
+            margin-top: 1.5rem;
+            width: 75%;
+
+        }
+    }
+
+    &__info{
+        margin-top: 1rem;
+        @include m-p1;
+        color: #475d5b;
+        
+
+        @include tablet{
+            @include dt-p1;
+            margin-inline: 2.25rem;
+            margin-bottom: 1.5rem;
+            width: 75%;
+        }
+    }
+}
