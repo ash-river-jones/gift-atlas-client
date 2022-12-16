@@ -1,12 +1,28 @@
-# Getting Started with Create React App
+# Welcome to Gift Atlas 🎁 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GitHub Repo for Server: https://github.com/ash-river-jones/gift-atlas-server
 
-## Available Scripts
+## Setting up Client .env
 
-In the project directory, you can run:
+Reference the sample.env file in the main directory - include the below lines:
 
-### `npm start`
+REACT_APP_SERVER_URL='server url'
+REACT_APP_CLIENT_URL='client url'
+REACT_APP_emailjs_service_id='servide ID from EmailJS'
+REACT_APP_emailjs_public_key='public key from EmailJS'
+
+
+## Installing Dependencies
+
+### `npm i`
+
+
+## Set up EmailJS
+
+Go to the EmailJS website and sign up: https://www.emailjs.com/
+
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
