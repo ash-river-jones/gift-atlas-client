@@ -1,0 +1,9 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.page_wrapper{
+    @include desktop{
+        max-width: 70vw;
+        margin-inline: auto;
+    }
+}

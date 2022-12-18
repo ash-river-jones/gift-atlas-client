@@ -7,7 +7,9 @@ export default function RequestGiftForm() {
 	return (
 		<div>
 			<PageHeader />
-			<RequestGiftFormCard />
+			<div className="page_wrapper">
+				<RequestGiftFormCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

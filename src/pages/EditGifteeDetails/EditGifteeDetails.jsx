@@ -7,7 +7,9 @@ export default function EditGifteeDetails() {
 	return (
 		<div>
 			<PageHeader />
-			<EditGifteeDetailsCard />
+			<div className="page_wrapper">
+				<EditGifteeDetailsCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

@@ -7,7 +7,9 @@ export default function AddGift() {
 	return (
 		<div>
 			<PageHeader />
-			<AddGiftCard />
+			<div className="page_wrapper">
+				<AddGiftCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

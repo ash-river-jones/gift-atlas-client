@@ -7,7 +7,9 @@ export default function Login() {
 	return (
 		<div>
 			<PageHeader />
-			<LoginCard />
+			<div className="page_wrapper">
+				<LoginCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

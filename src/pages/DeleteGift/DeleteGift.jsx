@@ -7,7 +7,9 @@ export default function DeleteGiftee() {
 	return (
 		<div>
 			<PageHeader />
-			<DeleteGiftCard />
+			<div className="page_wrapper">
+				<DeleteGiftCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

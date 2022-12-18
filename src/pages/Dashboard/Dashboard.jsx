@@ -7,7 +7,9 @@ export default function Dashboard() {
 	return (
 		<div>
 			<PageHeader />
-			<DashboardCard />
+			<div className="page_wrapper">
+				<DashboardCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

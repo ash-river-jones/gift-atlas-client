@@ -7,7 +7,9 @@ export default function GiftDetails() {
 	return (
 		<div>
 			<PageHeader />
-			<GiftDetailsCard />
+			<div className="page_wrapper">
+				<GiftDetailsCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

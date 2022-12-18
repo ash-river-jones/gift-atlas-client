@@ -7,7 +7,9 @@ export default function GifteeRequestForm() {
 	return (
 		<div>
 			<PageHeader />
-			<GifteeRequestFormCard />
+			<div className="page_wrapper">
+				<GifteeRequestFormCard />
+			</div>
 			<PageFooter />
 		</div>
 	);

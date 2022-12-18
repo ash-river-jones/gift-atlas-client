@@ -7,7 +7,9 @@ export default function About() {
 	return (
 		<div>
 			<PageHeader />
-			<AboutCard />
+			<div className="page_wrapper">
+				<AboutCard />
+			</div>
 			<PageFooter />
 		</div>
 	);
