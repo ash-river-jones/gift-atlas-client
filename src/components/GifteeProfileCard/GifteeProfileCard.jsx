@@ -55,7 +55,11 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT STATUS</h4>
                         <div className='profile__info-section'><p className='profile__info profile__order-status'>Ordered/Purchased</p></div>
-                    </li> : <div className='profile__section'></div>
+                    </li> : 
+                    <li className='profile__section'>
+                        <h4 className='profile__table-heading'>GIFT STATUS</h4>
+                        <div className='profile__info-section'><p className='profile__info profile__order-status'>Not Purchased</p></div>
+                    </li>
                     }
                     <li className='profile__section profile__section--icon'>   
                         <div className='profile__info-section profile__delete'><Link to={`/${giftee_id}/delete`}><img src={deleteIcon} alt="Delete Giftee Icon" /></Link></div>
@@ -71,14 +75,18 @@ export default function GifteeProfileCard({ giftee_id, address, birthday, email,
                         <div className='profile__info-section'><p className='profile__info'>{birthday?calcDaysTo(birthday):""}</p></div>
                     </li>
                     <li className='profile__section'>   
-                        <h4 className='profile__table-heading'>DAYS UNTIL</h4>
+                        <h4 className='profile__table-heading'>DAYS UNTIL HOLIDAY</h4>
                         <div className='profile__info-section'><p className='profile__info'>{next_holiday_date?calcDaysTo(next_holiday_date):""}</p></div>
                     </li>
                     {hasPurchasedGifts ? 
                     <li className='profile__section'>   
                         <h4 className='profile__table-heading'>GIFT PURCHASED</h4>
                         <div className='profile__info-section'><p className='profile__info'>{purchasedGifts.item_name}</p></div>
-                    </li>: <div className='profile__section'></div>
+                    </li>: 
+                    <li className='profile__section'>
+                        <h4 className='profile__table-heading'>GIFT PURCHASED</h4>
+                        <div className='profile__info-section'><p className='profile__info'></p></div>
+                    </li>
                     }
                     <li className='profile__section  profile__section--icon'>   
                         <div className='profile__info-section profile__edit'><Link to={`/${giftee_id}/edit`}><img src={editIcon} alt="Edit Giftee Icon" /></Link></div>

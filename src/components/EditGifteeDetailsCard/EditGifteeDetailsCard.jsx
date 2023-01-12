@@ -164,7 +164,7 @@ export default function EditGifteeDetailsCard() {
 			<main className='edit-giftee'>
 				<section className='edit-giftee__header'>
 					<div className='edit-giftee__header-wrapper'>
-						<Link to={`/${giftee_id}`}><img className='edit-giftee__back-arrow' src={backArrow} alt="Back arrow to dashboard" /></Link>
+						<Link to={`/dashboard`}><img className='edit-giftee__back-arrow' src={backArrow} alt="Back arrow to dashboard" /></Link>
 						<h1 className='edit-giftee__heading'>Edit Giftee</h1>
 					</div>
 				</section>
